@@ -1234,18 +1234,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb2e54041495384c87ee4addb13f435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
+  movementSpeed: 8
   startsFacingRight: 0
   jumpVelocity: 5
   jumpTime: 0.15
   jumpRememberanceTime: 0.1
-  currentJumpRememberanceTime: 0
-  maxGlideSpeed: 15
-  glideAcceleration: 1.2
-  defaultGlideTrajectory: {x: 3, y: -1}
-  advanceFlightTest: 0
+  flightTime: 2
+  currentFlightTime: 0
   rotationSpeed: 180
-  velocityDecay: 0.99
+  rotateLockTime: 0.1
   groundCollider: {fileID: 1937838409}
   coyoteTime: 0.1
   currentCoyoteTime: 0
