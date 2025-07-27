@@ -1,4 +1,5 @@
 using System;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -24,8 +25,17 @@ public class PlayerMovement : MonoBehaviour
     [Header("Glide Settings")]
 
     [SerializeField]
+    public bool advanceFlightTest = false;
+
+    [SerializeField]
     [Min(0.1f)]
     private float initialGlideSpeed;
+
+    [SerializeField]
+    private float rotationSpeed = 30;
+
+    [SerializeField]
+    private float velocityDecay = 0.99f;
 
     [SerializeField]
     private Vector2 defaultGlideTrajectory = Vector2.right;
@@ -69,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (onGround)
         {
+            rb.rotation = 0;
             gliding = false;
             rb.gravityScale = 1;
         }
@@ -88,6 +99,7 @@ public class PlayerMovement : MonoBehaviour
                 gliding = true;
                 glideTrajectory = facingRight ? defaultGlideTrajectory : new Vector2(-defaultGlideTrajectory.x, defaultGlideTrajectory.y);
                 glideTrajectory *= initialGlideSpeed;
+                rb.linearVelocity = glideTrajectory;
             }
         }
 
@@ -118,18 +130,39 @@ public class PlayerMovement : MonoBehaviour
         // Gliding
         if (gliding)
         {
-            rb.gravityScale = 0;
-            rb.linearVelocity = glideTrajectory;
+            if (advanceFlightTest)
+            {
+                rb.gravityScale = 0;
+
+                float rotateDir = Input.GetAxisRaw("Horizontal");
+
+                glideTrajectory = Quaternion.Euler(0, 0, -rotateDir * rotationSpeed * Time.deltaTime) * glideTrajectory * velocityDecay;
+                glideTrajectory += Physics2D.gravity * Time.deltaTime;
+                rb.linearVelocity = glideTrajectory;
+            }
+            else
+            {
+                
+            }
         }
     }
+
+    private float previousSqrVelocity = 0f;
 
     public void OnDrawGizmos()
     {
         // Gliding Vectors
         if (gliding)
         {
-            Gizmos.color = Color.green;
+            Gizmos.color = Color.blue;
+            Gizmos.DrawLine(transform.position, transform.position + (Vector3)rb.linearVelocity);
+
+            float currentSqrVelocity = glideTrajectory.SqrMagnitude();
+
+            Gizmos.color = currentSqrVelocity > previousSqrVelocity ? Color.green : Color.red;
             Gizmos.DrawLine(transform.position, transform.position + (Vector3)glideTrajectory);
+
+            previousSqrVelocity = currentSqrVelocity;
         }
     }
 }
