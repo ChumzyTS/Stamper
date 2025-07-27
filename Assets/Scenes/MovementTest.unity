@@ -1243,6 +1243,9 @@ MonoBehaviour:
   currentFlightTime: 0
   rotationSpeed: 180
   rotateLockTime: 0.1
+  boostMult: 5
+  boostTime: 0.2
+  hasBoost: 1
   groundCollider: {fileID: 1937838409}
   coyoteTime: 0.1
   currentCoyoteTime: 0

@@ -40,7 +40,18 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 glideTrajectory;
     private bool gliding;
 
+    [SerializeField]
+    [Min(0)]
+    private float boostMult;
+    [SerializeField]
+    [Min(0)]
+    private float boostTime;
+    private float currentBoostTime;
 
+    [SerializeField]
+    private bool hasBoost;
+
+    
 
     [Header("Ground Detection")]
 
@@ -84,26 +95,6 @@ public class PlayerMovement : MonoBehaviour
             currentFlightTime = flightTime;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (currentCoyoteTime > 0)
-            {
-                // Remember Jump
-                rb.rotation = 0;
-                gliding = false;
-                rb.gravityScale = 1;
-                currentJumpRememberanceTime = jumpRememberanceTime;
-            }
-            else
-            {
-
-                // Start Flying
-                gliding = true;
-                glideTrajectory = rb.linearVelocity.normalized * movementSpeed;
-                rb.linearVelocity = glideTrajectory;
-                currentRotateLockTime = rotateLockTime;
-            }
-        }
 
         if (!gliding)
         {
@@ -130,36 +121,66 @@ public class PlayerMovement : MonoBehaviour
         currentJumpRememberanceTime = currentJumpRememberanceTime > 0 ? currentJumpRememberanceTime - Time.deltaTime : 0;
 
         // Gliding
-        if (gliding && currentFlightTime > 0)
+        if (gliding && (currentFlightTime > 0 || currentBoostTime > 0))
         {
             rb.gravityScale = 0;
 
             float rotateDir = Input.GetAxisRaw("Horizontal");
 
+            // Boost
+            if (Input.GetKeyDown(KeyCode.Space) && hasBoost)
+            {
+                currentBoostTime = boostTime;
+            }
+
+            float speedMult = currentBoostTime > 0 ? boostMult : 1;
+
             if (currentRotateLockTime <= 0)
             {
-                glideTrajectory = Quaternion.Euler(0, 0, -rotateDir * rotationSpeed * Time.deltaTime) * glideTrajectory;
+                glideTrajectory = Quaternion.Euler(0, 0, -rotateDir * rotationSpeed * speedMult * Time.deltaTime) * glideTrajectory;
             }
             else
             {
                 currentRotateLockTime -= Time.deltaTime;
                 currentRotateLockTime = currentRotateLockTime < 0 ? 0 : currentRotateLockTime;
             }
-            rb.linearVelocity = glideTrajectory;
+            rb.linearVelocity = glideTrajectory * speedMult;
 
-
+            /*
             if (!Input.GetKey(KeyCode.Space))
             {
                 rb.rotation = 0;
                 gliding = false;
                 rb.gravityScale = 1;
             }
+            */
 
             currentFlightTime -= Time.deltaTime;
+            currentBoostTime -= Time.deltaTime;
         }
         else
         {
             rb.gravityScale = 1;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (currentCoyoteTime > 0 || currentFlightTime <= 0)
+            {
+                // Remember Jump
+                rb.rotation = 0;
+                gliding = false;
+                rb.gravityScale = 1;
+                currentJumpRememberanceTime = jumpRememberanceTime;
+            }
+            else
+            {
+                // Start Flying
+                gliding = true;
+                glideTrajectory = rb.linearVelocity.normalized * movementSpeed;
+                rb.linearVelocity = glideTrajectory;
+                currentRotateLockTime = rotateLockTime;
+            }
         }
     }
 
