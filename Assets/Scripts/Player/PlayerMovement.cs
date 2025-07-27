@@ -25,11 +25,19 @@ public class PlayerMovement : MonoBehaviour
     [Header("Glide Settings")]
 
     [SerializeField]
-    public bool advanceFlightTest = false;
+    private float maxGlideSpeed;
 
     [SerializeField]
-    [Min(0.1f)]
-    private float initialGlideSpeed;
+    [Min(1)]
+    private float glideAcceleration = 1;
+
+    [SerializeField]
+    private Vector2 defaultGlideTrajectory = Vector2.right;
+    private Vector2 glideTrajectory;
+    private bool gliding;
+
+    [SerializeField]
+    public bool advanceFlightTest = false;
 
     [SerializeField]
     private float rotationSpeed = 30;
@@ -37,10 +45,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float velocityDecay = 0.99f;
 
-    [SerializeField]
-    private Vector2 defaultGlideTrajectory = Vector2.right;
-    private Vector2 glideTrajectory;
-    private bool gliding;
 
     [Header("Ground Detection")]
 
@@ -86,11 +90,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (currentCoyoteTime > 0)
+            if (currentCoyoteTime > 0 || gliding)
             {
                 // Remember Jump
                 Debug.Log("JAUSDN");
+                rb.rotation = 0;
                 gliding = false;
+                rb.gravityScale = 1;
                 currentJumpRememberanceTime = jumpRememberanceTime;
             }
             else
@@ -98,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
                 // Start Gliding
                 gliding = true;
                 glideTrajectory = facingRight ? defaultGlideTrajectory : new Vector2(-defaultGlideTrajectory.x, defaultGlideTrajectory.y);
-                glideTrajectory *= initialGlideSpeed;
+                glideTrajectory *= movementSpeed;
                 rb.linearVelocity = glideTrajectory;
             }
         }
@@ -130,9 +136,10 @@ public class PlayerMovement : MonoBehaviour
         // Gliding
         if (gliding)
         {
+            rb.gravityScale = 0;
+
             if (advanceFlightTest)
             {
-                rb.gravityScale = 0;
 
                 float rotateDir = Input.GetAxisRaw("Horizontal");
 
@@ -142,7 +149,9 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                
+                rb.linearVelocity = glideTrajectory;
+                glideTrajectory += glideTrajectory * glideAcceleration * Time.deltaTime;
+                glideTrajectory = glideTrajectory.magnitude > maxGlideSpeed ? glideTrajectory.normalized * maxGlideSpeed : glideTrajectory;
             }
         }
     }
