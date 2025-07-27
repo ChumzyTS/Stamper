@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public float movementSpeed = 5f;
+    private Rigidbody2D rb;
+
+    public void Awake()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        
+        float movement = Input.GetAxisRaw("Horizontal") * movementSpeed;
+
+        rb.linearVelocity = new Vector2(movement, rb.linearVelocity.y);
     }
 }
