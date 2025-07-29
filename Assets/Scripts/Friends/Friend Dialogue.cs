@@ -31,7 +31,7 @@ public class FriendDialogue : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (DialogueBox.activeSelf == false)
+        if (DialogueBox.activeSelf == false && conversationLengths.Length != 0)
         {
             DialogueBox.SetActive(true);
 
