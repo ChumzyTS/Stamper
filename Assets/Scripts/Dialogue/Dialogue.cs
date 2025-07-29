@@ -5,46 +5,61 @@ using System.Collections;
 public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
-    public string[] lines;
+    
     public float textSpeed;
     public int conversation;
 
 
     private int index;
+    private bool pressed;
+    private string[] readLines;
 
     void Start()
     {
-        textComponent.text = string.Empty;
-        StartDialogue();
+        
     }
 
     // Update is called once per frame
+
+    public void StartDialogue(string[] lines)
+    {
+        textComponent.text = string.Empty;
+        readLines = lines;
+        index = 0;
+        StartCoroutine(TypeLine());
+
+    }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKey(KeyCode.F) && pressed == false)
         {
-            if (textComponent.text == lines[index])
+            pressed = true;
+            if (textComponent.text == readLines[index])
             {
                 NextLine();
             }
             else
             {
                 StopAllCoroutines();
-                textComponent.text = lines[index];
+                textComponent.text = readLines[index];
             }
         }
+        else
+        {
+            if (Input.GetKey(KeyCode.F) == false)
+            {
+                pressed = false;
+            }
+                
+        }
+        
     }
 
-    void StartDialogue()
-    {
-        index = 0;
-        StartCoroutine(TypeLine());
-
-    }
+    
 
     IEnumerator TypeLine()
     {
-        foreach (char c in lines[index].ToCharArray())
+        foreach (char c in readLines[index].ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
@@ -53,7 +68,7 @@ public class Dialogue : MonoBehaviour
 
     void NextLine()
     {
-        if (index < lines.Length - 1)
+        if (index < readLines.Length - 1)
         {
             index++;
             textComponent.text = string.Empty;
