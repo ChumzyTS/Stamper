@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private KeyCode glideKey = KeyCode.W;
 
+    [SerializeField]
+    private KeyCode stampKey = KeyCode.S;
+
     [Header("Walk Settings")]
     public float movementSpeed = 5f;
 
@@ -31,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
     private int extraJumpsLeft;
 
     private float currentJumpTime = 0;
+
+    private float jumpMult = 1;
 
     // Remembers that jump was pressed a moment after
     [SerializeField]
@@ -53,6 +58,28 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     [Min(0.01f)]
     private float glideAccelerationTime;
+
+    [Header("Stamp Setting")]
+    [SerializeField]
+    [Min(0)]
+    private float stampSpeed = 20;
+
+    [SerializeField]
+    [Min(0)]
+    private float stampPauseTime;
+    private float currentStampPauseTime;
+
+    [SerializeField]
+    [Min(0)]
+    private float stampJumpWindow;
+    [SerializeField]
+    private float currentStampJumpWindow;
+
+    [SerializeField]
+    [Min(1)]
+    private float stampJumpMult;
+
+    private bool stamping;
 
     [Header("Ground Detection")]
 
@@ -86,38 +113,93 @@ public class PlayerMovement : MonoBehaviour
 
         if (onGround)
         {
-            StopGliding();
+            if (stamping)
+            {
+                StopStamping(true);
+            }
+            if (gliding)
+            {
+                StopGliding();
+            }
             extraJumpsLeft = extraJumps;
-            glideTime = 0;
         }
 
         currentJumpRememberanceTime = currentJumpRememberanceTime > 0 ? currentJumpRememberanceTime - Time.deltaTime : 0;
 
-        if (Input.GetKeyDown(jumpKey) && (currentCoyoteTime > 0 || extraJumpsLeft > 0))
+        if (Input.GetKeyDown(jumpKey) && (currentCoyoteTime > 0 || extraJumpsLeft > 0 || currentStampJumpWindow > 0))
         {
             // Remember Jump
-            StopGliding();
             rb.rotation = 0;
             currentJumpRememberanceTime = jumpRememberanceTime;
+            jumpMult = 1;
+
+            if (currentStampJumpWindow > 0)
+            {
+                // Stamp Boosted Jump
+                currentStampJumpWindow = 0;
+                jumpMult = stampJumpMult;
+                Debug.Log("Stamp Jump");
+            }
+            
+            StopStamping(false);
+            StopGliding();
         }
 
+        
+        // Gliding
         if (Input.GetKeyDown(glideKey) && !onGround)
         {
+            StopStamping(false);
             StartGliding();
         }
         if (Input.GetKeyUp(glideKey))
         {
             StopGliding();
         }
-        
-        // Gliding
-        if (gliding)
+
+        if (Input.GetKeyDown(stampKey) && !onGround)
+        {
+            StartStamping();
+        }
+
+        if (stamping)
+        {
+            StampMovement();
+        }
+        else if (gliding)
         {
             GlideMovement(movement);
         }
         else
         {
             RegularMovement(movement);
+        }
+    }
+
+    // Stamp
+    private void StartStamping()
+    {
+        StopGliding();
+        stamping = true;
+        currentStampPauseTime = stampPauseTime;
+    }
+
+    private void StopStamping(bool jumpable)
+    {
+        stamping = false;
+        currentStampJumpWindow = jumpable ? stampJumpWindow : 0;
+    }
+
+    private void StampMovement()
+    {
+        if (currentStampPauseTime <= 0)
+        {
+            rb.linearVelocity = new Vector2(0, -stampSpeed);
+        }
+        else
+        {
+            currentStampPauseTime -= Time.deltaTime;
+            rb.linearVelocity = Vector2.zero;
         }
     }
 
@@ -151,6 +233,7 @@ public class PlayerMovement : MonoBehaviour
     {
         gliding = false;
         rb.gravityScale = 1;
+        glideTime = 0;
     }
 
     // Other Movement
@@ -166,7 +249,7 @@ public class PlayerMovement : MonoBehaviour
         {
             // Jumping
             currentJumpTime -= Time.deltaTime;
-            rb.linearVelocityY = jumpVelocity;
+            rb.linearVelocityY = jumpVelocity * jumpMult;
         }
 
         // Movement

@@ -1368,6 +1368,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb2e54041495384c87ee4addb13f435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpKey: 32
+  glideKey: 119
+  stampKey: 115
   movementSpeed: 8
   startsFacingRight: 0
   jumpVelocity: 5
@@ -1375,8 +1378,14 @@ MonoBehaviour:
   extraJumps: 2
   jumpRememberanceTime: 0.1
   glideTrajectory: {x: 3, y: -1}
+  minGlideMult: 1.3
   maxGlideMult: 2
   glideAccelerationTime: 1.2
+  stampSpeed: 20
+  stampPauseTime: 0.1
+  stampJumpWindow: 0.5
+  currentStampJumpWindow: 0
+  stampJumpMult: 2.5
   groundCollider: {fileID: 1937838409}
   coyoteTime: 0.1
 --- !u!1 &1209283703
