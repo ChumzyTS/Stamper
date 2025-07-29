@@ -1,4 +1,5 @@
 using System;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -18,19 +19,39 @@ public class PlayerMovement : MonoBehaviour
 
     // Remembers that jump was pressed a moment after
     public float jumpRememberanceTime = 0.02f;
-    [SerializeField]
     private float currentJumpRememberanceTime;
 
-    [Header("Glide Settings")]
+    [Header("Flight Settings")]
+    [SerializeField]
+    [Min(0)]
+    private float flightTime;
+    [SerializeField]
+    private float currentFlightTime;
 
     [SerializeField]
-    [Min(0.1f)]
-    private float initialGlideSpeed;
+    [Min(0)]
+    private float rotationSpeed;
 
     [SerializeField]
-    private Vector2 defaultGlideTrajectory = Vector2.right;
+    [Min(0)]
+    private float rotateLockTime = 0.1f;
+    private float currentRotateLockTime;
+
     private Vector2 glideTrajectory;
     private bool gliding;
+
+    [SerializeField]
+    [Min(0)]
+    private float boostMult;
+    [SerializeField]
+    [Min(0)]
+    private float boostTime;
+    private float currentBoostTime;
+
+    [SerializeField]
+    private bool hasBoost;
+
+    
 
     [Header("Ground Detection")]
 
@@ -50,7 +71,6 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        defaultGlideTrajectory = defaultGlideTrajectory.normalized;
     }
 
     public void Update()
@@ -69,27 +89,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (onGround)
         {
+            rb.rotation = 0;
             gliding = false;
             rb.gravityScale = 1;
+            currentFlightTime = flightTime;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (currentCoyoteTime > 0)
-            {
-                // Remember Jump
-                Debug.Log("JAUSDN");
-                gliding = false;
-                currentJumpRememberanceTime = jumpRememberanceTime;
-            }
-            else
-            {
-                // Start Gliding
-                gliding = true;
-                glideTrajectory = facingRight ? defaultGlideTrajectory : new Vector2(-defaultGlideTrajectory.x, defaultGlideTrajectory.y);
-                glideTrajectory *= initialGlideSpeed;
-            }
-        }
 
         if (!gliding)
         {
@@ -106,25 +111,86 @@ public class PlayerMovement : MonoBehaviour
             {
                 // Jumping
                 currentJumpTime -= Time.deltaTime;
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpVelocity);
+                rb.linearVelocityY = jumpVelocity;
             }
 
-            // Horizontal Movement
-            rb.linearVelocity = new Vector2(movement, rb.linearVelocity.y);
+            // Movement
+            rb.linearVelocityX = movement;
         }
 
         currentJumpRememberanceTime = currentJumpRememberanceTime > 0 ? currentJumpRememberanceTime - Time.deltaTime : 0;
 
         // Gliding
-        if (gliding)
+        if (gliding && (currentFlightTime > 0 || currentBoostTime > 0))
         {
             rb.gravityScale = 0;
-            rb.linearVelocity = glideTrajectory;
+
+            float rotateDir = Input.GetAxisRaw("Horizontal");
+
+            // Boost
+            if (Input.GetKeyDown(KeyCode.Space) && hasBoost)
+            {
+                currentBoostTime = boostTime;
+            }
+
+            float speedMult = currentBoostTime > 0 ? boostMult : 1;
+
+            if (currentRotateLockTime <= 0)
+            {
+                glideTrajectory = Quaternion.Euler(0, 0, -rotateDir * rotationSpeed * speedMult * Time.deltaTime) * glideTrajectory;
+            }
+            else
+            {
+                currentRotateLockTime -= Time.deltaTime;
+                currentRotateLockTime = currentRotateLockTime < 0 ? 0 : currentRotateLockTime;
+            }
+            rb.linearVelocity = glideTrajectory * speedMult;
+
+            /*
+            if (!Input.GetKey(KeyCode.Space))
+            {
+                rb.rotation = 0;
+                gliding = false;
+                rb.gravityScale = 1;
+            }
+            */
+
+            currentFlightTime -= Time.deltaTime;
+            currentBoostTime -= Time.deltaTime;
+        }
+        else
+        {
+            rb.gravityScale = 1;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (currentCoyoteTime > 0 || currentFlightTime <= 0)
+            {
+                // Remember Jump
+                rb.rotation = 0;
+                gliding = false;
+                rb.gravityScale = 1;
+                currentJumpRememberanceTime = jumpRememberanceTime;
+            }
+            else
+            {
+                // Start Flying
+                gliding = true;
+                glideTrajectory = rb.linearVelocity.normalized * movementSpeed;
+                rb.linearVelocity = glideTrajectory;
+                currentRotateLockTime = rotateLockTime;
+            }
         }
     }
 
+
     public void OnDrawGizmos()
     {
+        // Velocity Vector
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(transform.position, transform.position + (Vector3)rb.linearVelocity);
+
         // Gliding Vectors
         if (gliding)
         {
