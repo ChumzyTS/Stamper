@@ -1,9 +1,17 @@
 using System;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Inputs")]
+    [SerializeField]
+    private KeyCode jumpKey = KeyCode.Space;
+    
+    [SerializeField]
+    private KeyCode glideKey = KeyCode.W;
+
     [Header("Walk Settings")]
     public float movementSpeed = 5f;
 
@@ -36,6 +44,9 @@ public class PlayerMovement : MonoBehaviour
     private bool gliding;
     private float glideTime;
 
+    [SerializeField]
+    [Min(1)]
+    private float minGlideMult;
     [SerializeField]
     [Min(1)]
     private float maxGlideMult;
@@ -75,94 +86,107 @@ public class PlayerMovement : MonoBehaviour
 
         if (onGround)
         {
-            gliding = false;
-            rb.gravityScale = 1;
+            StopGliding();
             extraJumpsLeft = extraJumps;
             glideTime = 0;
         }
 
-        if (!gliding)
-        {
-
-            if ((currentCoyoteTime > 0 || extraJumpsLeft > 0) && currentJumpRememberanceTime > 0)
-            {
-                // Jump!
-                currentJumpTime = jumpTime;
-                currentJumpRememberanceTime = 0;
-
-                if (currentCoyoteTime <= 0)
-                {
-                    extraJumpsLeft--;
-                }
-                
-                currentCoyoteTime = 0;
-            }
-
-            if (currentJumpTime > 0)
-            {
-                // Jumping
-                currentJumpTime -= Time.deltaTime;
-                rb.linearVelocityY = jumpVelocity;
-            }
-
-            // Movement
-            rb.linearVelocityX = movement;
-        }
-
         currentJumpRememberanceTime = currentJumpRememberanceTime > 0 ? currentJumpRememberanceTime - Time.deltaTime : 0;
 
+        if (Input.GetKeyDown(jumpKey) && (currentCoyoteTime > 0 || extraJumpsLeft > 0))
+        {
+            // Remember Jump
+            StopGliding();
+            rb.rotation = 0;
+            currentJumpRememberanceTime = jumpRememberanceTime;
+        }
+
+        if (Input.GetKeyDown(glideKey) && !onGround)
+        {
+            StartGliding();
+        }
+        if (Input.GetKeyUp(glideKey))
+        {
+            StopGliding();
+        }
+        
         // Gliding
         if (gliding)
         {
-            glideTime += Time.deltaTime;
-            rb.gravityScale = 0;
-
-            float glideMult = math.lerp(movementSpeed, movementSpeed * maxGlideMult, glideTime / glideAccelerationTime);
-
-            if (movement != 0)
-            {
-                rb.linearVelocity = facingRight ? glideMult * glideTrajectory : glideMult * new Vector2(-glideTrajectory.x, glideTrajectory.y);
-            }
-            else
-            {
-                rb.linearVelocity = glideMult * new Vector2(0, glideTrajectory.y);
-                glideTime = 0;
-            }
+            GlideMovement(movement);
         }
         else
         {
-            rb.gravityScale = 1;
-        }
-        
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (currentCoyoteTime > 0 || extraJumpsLeft > 0)
-            {
-                // Remember Jump
-                rb.rotation = 0;
-                gliding = false;
-                rb.gravityScale = 1;
-                currentJumpRememberanceTime = jumpRememberanceTime;
-            }
-            else
-            {
-                if (!gliding)
-                {
-                    // Start Gliding
-                    gliding = true;
-                    rb.linearVelocity = glideTrajectory * movementSpeed;
-                }
-                else
-                {
-                    // Stop Gliding
-                    gliding = false;
-                    rb.gravityScale = 1;
-                }
-            }
+            RegularMovement(movement);
         }
     }
 
+    // Gliding
+    private void GlideMovement(float movement)
+    {
+        glideTime += Time.deltaTime;
+        rb.gravityScale = 0;
 
+        float glideMult = math.lerp(movementSpeed * minGlideMult, movementSpeed * maxGlideMult, glideTime / glideAccelerationTime);
+
+        if (movement != 0)
+        {
+            rb.linearVelocity = facingRight ? glideMult * glideTrajectory : glideMult * new Vector2(-glideTrajectory.x, glideTrajectory.y);
+        }
+        else
+        {
+            rb.linearVelocity = glideMult * new Vector2(0, glideTrajectory.y);
+            glideTime = 0;
+        }
+    }
+
+    private void StartGliding()
+    {
+        gliding = true;
+        rb.gravityScale = 0;
+        glideTime = 0;
+    }
+
+    private void StopGliding()
+    {
+        gliding = false;
+        rb.gravityScale = 1;
+    }
+
+    // Other Movement
+    private void RegularMovement(float movement)
+    {
+        if ((currentCoyoteTime > 0 || extraJumpsLeft > 0) && currentJumpRememberanceTime > 0)
+        {
+            // Jump!
+            Jump();
+        }
+
+        if (currentJumpTime > 0)
+        {
+            // Jumping
+            currentJumpTime -= Time.deltaTime;
+            rb.linearVelocityY = jumpVelocity;
+        }
+
+        // Movement
+        rb.linearVelocityX = movement;
+    }
+    
+    private void Jump()
+    {
+        currentJumpTime = jumpTime;
+        currentJumpRememberanceTime = 0;
+
+        if (currentCoyoteTime <= 0)
+        {
+            extraJumpsLeft--;
+        }
+
+        currentCoyoteTime = 0;
+    }
+
+    // Debug Stuff
     public void OnDrawGizmos()
     {
         // Velocity Vector
