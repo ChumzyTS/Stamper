@@ -515,13 +515,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueBox: {fileID: 1897676902}
-  Lines:
-  - hi im a seal
-  - arf
-  - arf arf yay
-  - :3
-  - :D
-  - bie
+  conversationLengths: 
+  conversations: []
 --- !u!212 &1250074994
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -786,9 +781,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueBox: {fileID: 1897676902}
-  Lines:
-  - Test 1
-  - dicks
+  conversationLengths: 020000000100000001000000
+  conversations:
+  - HI
+  - and hello and good morning and goodbye
+  - lovely day we have
+  - goodbye
 --- !u!61 &1933605675
 BoxCollider2D:
   m_ObjectHideFlags: 0
