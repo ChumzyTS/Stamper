@@ -140,12 +140,12 @@ public class PlayerMovement : MonoBehaviour
                 jumpMult = stampJumpMult;
                 Debug.Log("Stamp Jump");
             }
-            
+
             StopStamping(false);
             StopGliding();
         }
 
-        
+
         // Gliding
         if (Input.GetKeyDown(glideKey) && !onGround)
         {
@@ -174,6 +174,8 @@ public class PlayerMovement : MonoBehaviour
         {
             RegularMovement(movement);
         }
+
+        currentStampJumpWindow = currentStampJumpWindow > 0 ? currentStampJumpWindow - Time.deltaTime : currentStampJumpWindow;
     }
 
     // Stamp

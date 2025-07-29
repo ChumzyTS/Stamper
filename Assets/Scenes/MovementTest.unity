@@ -1383,7 +1383,7 @@ MonoBehaviour:
   glideAccelerationTime: 1.2
   stampSpeed: 20
   stampPauseTime: 0.1
-  stampJumpWindow: 0.5
+  stampJumpWindow: 0.2
   currentStampJumpWindow: 0
   stampJumpMult: 2.5
   groundCollider: {fileID: 1937838409}
