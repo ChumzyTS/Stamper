@@ -528,10 +528,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 2100520755}
   lines:
-  - Hello World
-  - Ligma Balls
-  - Steve Jobs
+  - Ligma BALLS
+  - Stove Jobs
   textSpeed: 0.1
+  conversation: 1
 --- !u!1 &2100520753
 GameObject:
   m_ObjectHideFlags: 0

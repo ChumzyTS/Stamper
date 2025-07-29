@@ -7,6 +7,8 @@ public class Dialogue : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
+    public int conversation;
+
 
     private int index;
 
