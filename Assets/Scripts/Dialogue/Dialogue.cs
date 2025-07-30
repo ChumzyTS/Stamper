@@ -5,6 +5,7 @@ using System.Collections;
 public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
+    public TextMeshProUGUI nameComponent;
     
     public float textSpeed;
     public int conversation;
@@ -21,9 +22,10 @@ public class Dialogue : MonoBehaviour
 
     // Update is called once per frame
 
-    public void StartDialogue(string[] lines)
+    public void StartDialogue(string[] lines, string FName)
     {
         textComponent.text = string.Empty;
+        nameComponent.text = FName;
         readLines = lines;
         index = 0;
         StartCoroutine(TypeLine());

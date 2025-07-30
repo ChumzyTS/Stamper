@@ -5,9 +5,13 @@ using UnityEngine;
 
 public class FriendDialogue : MonoBehaviour
 {
+    public string FName;
+
     public GameObject DialogueBox;
 
+
     [Header("Dialogue Lines")]
+    
     [SerializeField]
     private int[] conversationLengths;
     [SerializeField]
@@ -44,7 +48,7 @@ public class FriendDialogue : MonoBehaviour
             string[] lines = lLines.ToArray();
             lLines.Clear();
 
-            DialogueBox.GetComponent<Dialogue>().StartDialogue(lines);
+            DialogueBox.GetComponent<Dialogue>().StartDialogue(lines, FName);
             
             if (conversationLengths.Length > conv + 1)
             {
