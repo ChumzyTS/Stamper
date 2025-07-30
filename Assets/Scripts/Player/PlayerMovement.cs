@@ -103,6 +103,8 @@ public class PlayerMovement : MonoBehaviour
     public BoxCollider2D belayCollider;
     public GameObject respawnAnchor;
     private bool touchingBelay;
+    public Sprite StampedSign;
+    public Sprite UnstampedSign;
 
     public void Awake()
     {
@@ -312,11 +314,11 @@ public class PlayerMovement : MonoBehaviour
         {
             if (respawnAnchor != null)
             {
-                respawnAnchor.GetComponent<SpriteRenderer>().color = Color.yellow;
+                respawnAnchor.GetComponent<SpriteRenderer>().sprite = UnstampedSign;
             }
             
             respawnAnchor = collisionObject;
-            respawnAnchor.GetComponent<SpriteRenderer>().color = Color.red;
+            respawnAnchor.GetComponent<SpriteRenderer>().sprite = StampedSign;
 
         }
         
