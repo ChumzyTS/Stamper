@@ -290,15 +290,22 @@ public class PlayerMovement : MonoBehaviour
         currentCoyoteTime = 0;
     }
 
-    // Debug Stuff
-    public void OnDrawGizmos()
+    private void StopAllMovement()
     {
-        // Velocity Vector
-        if (rb)
+        StopGliding();
+        StopStamping(false);
+        currentJumpTime = 0;
+        rb.linearVelocity = Vector2.zero;
+    }
+
+    public void Respawn()
+    {
+        if (respawnAnchor != null)
         {
-            Gizmos.color = Color.blue;
-            Gizmos.DrawLine(transform.position, transform.position + (Vector3)rb.linearVelocity);
+            StopAllMovement();
+            transform.position = respawnAnchor.transform.position;
         }
+
     }
 
     // Belay Collision
@@ -321,12 +328,15 @@ public class PlayerMovement : MonoBehaviour
         }
         
     }
-    public void Respawn()
-    {
-        if (respawnAnchor != null)
-        {
-            transform.position = respawnAnchor.transform.position;
-        }
 
+    // Debug Stuff
+    public void OnDrawGizmos()
+    {
+        // Velocity Vector
+        if (rb)
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawLine(transform.position, transform.position + (Vector3)rb.linearVelocity);
+        }
     }
 }
