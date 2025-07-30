@@ -78,6 +78,8 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
+            textComponent.text = string.Empty;
+            nameComponent.text = string.Empty;
             gameObject.SetActive(false);
         }
     }
