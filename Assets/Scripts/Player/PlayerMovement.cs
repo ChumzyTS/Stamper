@@ -1,6 +1,7 @@
 using System;
 using Unity.Mathematics;
 using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -14,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private KeyCode stampKey = KeyCode.S;
+
+    [SerializeField]
+    private KeyCode respawnKey = KeyCode.R;
 
     [Header("Walk Settings")]
     public float movementSpeed = 5f;
@@ -84,6 +88,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Ground Detection")]
 
     public BoxCollider2D groundCollider;
+    
 
     [SerializeField]
     private float coyoteTime = 0.02f;
@@ -92,6 +97,12 @@ public class PlayerMovement : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
+
+    [Header("Belay Detection")]
+
+    public BoxCollider2D belayCollider;
+    public GameObject respawnAnchor;
+    private bool touchingBelay;
 
     public void Awake()
     {
@@ -102,6 +113,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Update()
     {
+        
         // Walking Input
         float movement = Input.GetAxisRaw("Horizontal") * movementSpeed;
         facingRight = movement == 0 ? facingRight : movement > 0 != startsFacingRight;
@@ -175,7 +187,14 @@ public class PlayerMovement : MonoBehaviour
             RegularMovement(movement);
         }
 
+        // Respawn
+        if (Input.GetKeyDown(respawnKey))
+        {
+            Respawn();
+        }
+
         currentStampJumpWindow = currentStampJumpWindow > 0 ? currentStampJumpWindow - Time.deltaTime : currentStampJumpWindow;
+
     }
 
     // Stamp
@@ -280,5 +299,34 @@ public class PlayerMovement : MonoBehaviour
             Gizmos.color = Color.blue;
             Gizmos.DrawLine(transform.position, transform.position + (Vector3)rb.linearVelocity);
         }
+    }
+
+    // Belay Collision
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+        
+        GameObject collisionObject = collision.gameObject;
+        // Debug.Log(collisionObject);
+        if (collisionObject.tag == "Belay")
+        {
+            if (respawnAnchor != null)
+            {
+                respawnAnchor.GetComponent<SpriteRenderer>().color = Color.yellow;
+            }
+            
+            respawnAnchor = collisionObject;
+            respawnAnchor.GetComponent<SpriteRenderer>().color = Color.red;
+
+        }
+        
+    }
+    public void Respawn()
+    {
+        if (respawnAnchor != null)
+        {
+            transform.position = respawnAnchor.transform.position;
+        }
+
     }
 }
