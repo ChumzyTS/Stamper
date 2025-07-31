@@ -6,7 +6,8 @@ public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public TextMeshProUGUI nameComponent;
-    
+    public GameObject faceComponent;
+
     public float textSpeed;
     public int conversation;
 
@@ -14,6 +15,10 @@ public class Dialogue : MonoBehaviour
     private int index;
     private bool pressed;
     private string[] readLines;
+    private bool HiddenNameB;
+    private string nameDisplay;
+    private string fname;
+    private int unhideAt;
 
     void Start()
     {
@@ -22,10 +27,25 @@ public class Dialogue : MonoBehaviour
 
     // Update is called once per frame
 
-    public void StartDialogue(string[] lines, string FName)
+    public void StartDialogue(string[] lines, string FName, bool hasHiddenName, int revealNameAt, Sprite faceSprite)
     {
+        // name
         textComponent.text = string.Empty;
-        nameComponent.text = FName;
+        fname = FName;
+        HiddenNameB = hasHiddenName;
+        unhideAt = revealNameAt;
+        if (HiddenNameB)
+        {
+            HiddenNameDisplay();
+        } else
+        {
+            nameDisplay = fname;
+        }
+
+        // set side image
+        faceComponent.GetComponent<SpriteRenderer>().sprite = faceSprite;
+        
+        // read lines
         readLines = lines;
         index = 0;
         StartCoroutine(TypeLine());
@@ -55,12 +75,15 @@ public class Dialogue : MonoBehaviour
                 
         }
         
+
     }
 
     
 
     IEnumerator TypeLine()
     {
+        nameComponent.text = nameDisplay;
+
         foreach (char c in readLines[index].ToCharArray())
         {
             textComponent.text += c;
@@ -74,6 +97,10 @@ public class Dialogue : MonoBehaviour
         {
             index++;
             textComponent.text = string.Empty;
+            if (HiddenNameB)
+            {
+                HiddenNameDisplay();
+            }
             StartCoroutine(TypeLine());
         }
         else
@@ -81,6 +108,17 @@ public class Dialogue : MonoBehaviour
             textComponent.text = string.Empty;
             nameComponent.text = string.Empty;
             gameObject.SetActive(false);
+        }
+    }
+
+    void HiddenNameDisplay()
+    {
+        if (index >= unhideAt && unhideAt != -1)
+        {
+            nameDisplay = fname; 
+        } else
+        {
+            nameDisplay = "???";
         }
     }
 }

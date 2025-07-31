@@ -97,14 +97,9 @@ public class PlayerMovement : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
-
-    [Header("Belay Detection")]
-
-    public BoxCollider2D belayCollider;
+    
+    // respawn point
     public GameObject respawnAnchor;
-    private bool touchingBelay;
-    public Sprite StampedSign;
-    public Sprite UnstampedSign;
 
     public void Awake()
     {
@@ -310,26 +305,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    // Belay Collision
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        
-        
-        GameObject collisionObject = collision.gameObject;
-        // Debug.Log(collisionObject);
-        if (collisionObject.tag == "Belay")
-        {
-            if (respawnAnchor != null)
-            {
-                respawnAnchor.GetComponent<SpriteRenderer>().sprite = UnstampedSign;
-            }
-            
-            respawnAnchor = collisionObject;
-            respawnAnchor.GetComponent<SpriteRenderer>().sprite = StampedSign;
-
-        }
-        
-    }
+    
 
     // Debug Stuff
     public void OnDrawGizmos()

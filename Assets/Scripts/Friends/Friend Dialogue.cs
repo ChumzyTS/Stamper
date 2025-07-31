@@ -6,6 +6,14 @@ using UnityEngine;
 public class FriendDialogue : MonoBehaviour
 {
     public string FName;
+    [SerializeField]
+    private bool hasHiddenName;
+    [SerializeField]
+    private int revealNameAt;
+    private int revealNameIndex;
+    [SerializeField]
+    private Sprite faceSprite;
+
 
     public GameObject DialogueBox;
 
@@ -48,7 +56,23 @@ public class FriendDialogue : MonoBehaviour
             string[] lines = lLines.ToArray();
             lLines.Clear();
 
-            DialogueBox.GetComponent<Dialogue>().StartDialogue(lines, FName);
+            if (hasHiddenName)
+            {
+                if (location + conversationLengths[conv] > revealNameAt)
+                {
+                    revealNameIndex = Math.Max(revealNameAt - location, 0);
+                }
+                else
+                {
+                    revealNameIndex = -1;
+                }
+            } else
+            {
+                revealNameIndex = 0;
+            }
+            
+
+            DialogueBox.GetComponent<Dialogue>().StartDialogue(lines, FName, hasHiddenName, revealNameIndex, faceSprite);
             
             if (conversationLengths.Length > conv + 1)
             {
