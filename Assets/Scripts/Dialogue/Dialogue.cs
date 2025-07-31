@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Dialogue : MonoBehaviour
 {
@@ -43,7 +44,7 @@ public class Dialogue : MonoBehaviour
         }
 
         // set side image
-        faceComponent.GetComponent<SpriteRenderer>().sprite = faceSprite;
+        faceComponent.GetComponent<Image>().sprite = faceSprite;
         
         // read lines
         readLines = lines;
