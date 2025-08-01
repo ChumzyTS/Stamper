@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3b86d06d171987e49ac20663008dbb97
+guid: 70a36183c660e6546b2e24a5ea48da6d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5823330443489636407
-    second: lizard head_0
+      213: -5714980711290058717
+    second: seal head_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lizard head_0
+      name: seal head_0
       rect:
         serializedVersion: 2
-        x: 52
-        y: 478
-        width: 1854
-        height: 1053
+        x: 54
+        y: 170
+        width: 1724
+        height: 1493
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 730faed5f20a0d050800000000000000
-      internalID: 5823330443489636407
+      spriteID: 328c855825f40b0b0800000000000000
+      internalID: -5714980711290058717
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lizard head_0: 5823330443489636407
+      seal head_0: -5714980711290058717
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

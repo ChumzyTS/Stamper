@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 248e39bcebcc5664d9ca86e528117d3f
+guid: 5a687ac638ddc7a479c0260cf2642c5a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4036414036253802945
-    second: seal no background_0
+      213: 2696611697746710369
+    second: lizard window_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 2048
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: seal no background_0
+      name: lizard window_0
       rect:
         serializedVersion: 2
-        x: 86
-        y: 315
-        width: 2801
-        height: 1910
+        x: 496
+        y: 0
+        width: 2304
+        height: 3300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c10f4d1e29340830800000000000000
-      internalID: 4036414036253802945
+      spriteID: 16f0b554d0a4c6520800000000000000
+      internalID: 2696611697746710369
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      seal no background_0: 4036414036253802945
+      lizard window_0: 2696611697746710369
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

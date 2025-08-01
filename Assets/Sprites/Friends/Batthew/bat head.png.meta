@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 377b624e94d3e5548bd510c5ddfe7f59
+guid: 7f03a167e9344c54d96fb7ae960d3f48
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5714980711290058717
-    second: seal head_0
+      213: 3853874450850942454
+    second: bat head_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: seal head_0
+      name: bat head_0
       rect:
         serializedVersion: 2
-        x: 303
-        y: 733
-        width: 2378
-        height: 1492
+        x: 109
+        y: 274
+        width: 1697
+        height: 1363
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 328c855825f40b0b0800000000000000
-      internalID: -5714980711290058717
+      spriteID: 6fd8ce3f466bb7530800000000000000
+      internalID: 3853874450850942454
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      seal head_0: -5714980711290058717
+      bat head_0: 3853874450850942454
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

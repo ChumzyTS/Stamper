@@ -569,8 +569,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.3676758, y: 0.9328851}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 23.19, y: 34.797108}
+    newSize: {x: 23.19, y: 34.797108}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -592,7 +592,7 @@ MonoBehaviour:
   FName: Cecilia
   hasHiddenName: 0
   revealNameAt: 0
-  faceSprite: {fileID: -5714980711290058717, guid: 377b624e94d3e5548bd510c5ddfe7f59, type: 3}
+  faceSprite: {fileID: -5714980711290058717, guid: 70a36183c660e6546b2e24a5ea48da6d, type: 3}
   DialogueBox: {fileID: 1897676902}
   conversationLengths: 0200000001000000
   conversations:
@@ -643,12 +643,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4036414036253802945, guid: 248e39bcebcc5664d9ca86e528117d3f, type: 3}
+  m_Sprite: {fileID: 5348712472599315788, guid: 4e9d73cb22cceed4b9e4e0585e6fb8e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 23.19, y: 34.797108}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -972,7 +972,7 @@ SpriteRenderer:
   m_Size: {x: 1.6113281, y: 1.2454749}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1933605673
