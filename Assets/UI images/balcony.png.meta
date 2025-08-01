@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4971b42d20e3c654c90d4af8f75d46b9
+guid: a14b4db7fab912c4cbe23dbe8de5c07d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6199886327801638459
-    second: apartment_0
+      213: 3667054528505570668
+    second: balcony_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 2048
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: apartment_0
+      name: balcony_0
       rect:
         serializedVersion: 2
-        x: 195
+        x: 0
         y: 0
-        width: 2626
-        height: 3000
+        width: 313
+        height: 207
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5c11597bb3495f9a0800000000000000
-      internalID: -6199886327801638459
+      spriteID: c65ef8f2aaef3e230800000000000000
+      internalID: 3667054528505570668
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      apartment_0: -6199886327801638459
+      balcony_0: 3667054528505570668
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
