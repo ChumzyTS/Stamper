@@ -31,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
     private float jumpVelocity = 3;
     [SerializeField]
     private float jumpTime = 0.4f;
+    [SerializeField]
+    AudioClip jumpSFX;
 
     [SerializeField]
     [Min(0)]
@@ -117,6 +119,7 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer.flipX = facingRight;
 
         // Jumping Input
+
         onGround = groundCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
         currentCoyoteTime = onGround ? coyoteTime : (currentCoyoteTime > 0 ? currentCoyoteTime - Time.deltaTime : 0);
 
@@ -141,6 +144,8 @@ public class PlayerMovement : MonoBehaviour
             rb.rotation = 0;
             currentJumpRememberanceTime = jumpRememberanceTime;
             jumpMult = 1;
+            
+
 
             if (currentStampJumpWindow > 0)
             {
@@ -260,6 +265,8 @@ public class PlayerMovement : MonoBehaviour
         if ((currentCoyoteTime > 0 || extraJumpsLeft > 0) && currentJumpRememberanceTime > 0)
         {
             // Jump!
+            // play SFX?
+            SFXManager.Instance.PlaySFXClip(jumpSFX, transform, 1f);
             Jump();
         }
 
