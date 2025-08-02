@@ -1550,7 +1550,7 @@ Transform:
   m_GameObject: {fileID: 852642422}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.5087676, y: 33.349598, z: 0.17185071}
+  m_LocalPosition: {x: -3.501, y: 33.279, z: 0.17185071}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3149,7 +3149,7 @@ MonoBehaviour:
   jumpSFX: {fileID: 8300000, guid: d6b8b67c6b48f3a4dacaa3a48c936ca6, type: 3}
   extraJumps: 2
   jumpRememberanceTime: 0.1
-  glideTrajectory: {x: 3, y: -1}
+  glideTrajectory: {x: -3, y: -1}
   minGlideMult: 1.3
   maxGlideMult: 2
   glideAccelerationTime: 1.2
@@ -3160,6 +3160,8 @@ MonoBehaviour:
   stampJumpMult: 2.5
   groundCollider: {fileID: 735686086}
   coyoteTime: 0.1
+  idleTimeRange: {x: 0, y: 0}
+  idleAnimationCount: 0
   respawnAnchor: {fileID: 0}
 --- !u!212 &1343385346
 SpriteRenderer:
@@ -3799,7 +3801,7 @@ Transform:
   m_GameObject: {fileID: 1623875039}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.3887672, y: 79.6896, z: 0.17185071}
+  m_LocalPosition: {x: -3.42, y: 79.48, z: 0.17185071}
   m_LocalScale: {x: 0.9889786, y: 1.4854217, z: 1.4854217}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4197,7 +4199,7 @@ Transform:
   m_GameObject: {fileID: 1950423631}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.4287672, y: 62.6396, z: 0.17185071}
+  m_LocalPosition: {x: -3.435, y: 62.526, z: 0.17185071}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 1
   m_Children: []
