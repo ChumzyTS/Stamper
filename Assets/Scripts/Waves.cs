@@ -18,7 +18,10 @@ public class Waves : MonoBehaviour
 
     void Awake()
     {
-        initBoatPos = boat.transform.position;
+        if (boat)
+        {
+            initBoatPos = boat.transform.position;
+        }
     }
 
     // Update is called once per frame
@@ -32,15 +35,18 @@ public class Waves : MonoBehaviour
         }
 
         // Boat
-        if (boat.transform.position.y < initBoatPos.y - boatSink)
+        if (boat)
         {
-            boatDir = 1;
-        }
-        if (boat.transform.position.y > initBoatPos.y)
-        {
-            boatDir = -1;
-        }
+            if (boat.transform.position.y < initBoatPos.y - boatSink)
+            {
+                boatDir = 1;
+            }
+            if (boat.transform.position.y > initBoatPos.y)
+            {
+                boatDir = -1;
+            }
 
-        boat.transform.position += new Vector3(0, boatDir * Time.deltaTime * boatSpeed, 0);
+            boat.transform.position += new Vector3(0, boatDir * Time.deltaTime * boatSpeed, 0);
+        }
     }
 }
