@@ -42,11 +42,14 @@ TagManager:
   - name: Background
     uniqueID: 3293437233
     locked: 0
-  - name: Waves
-    uniqueID: 110301001
-    locked: 0
   - name: Windows
     uniqueID: 264268457
+    locked: 0
+  - name: NPC
+    uniqueID: 4233544085
+    locked: 0
+  - name: Waves
+    uniqueID: 110301001
     locked: 0
   - name: Front of Dialogue Box
     uniqueID: 2027954837

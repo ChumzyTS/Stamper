@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5b6c4a174ebe052469fbbe630560f724
+guid: ecf57dc72f4a5cb45a812a4e562e08de
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -38,33 +38,6 @@ TextureImporter:
   - first:
       213: 4104199202459255976
     second: windows_11
-  - first:
-      213: -3618696063203433802
-    second: windows_12
-  - first:
-      213: -5460788166488254193
-    second: windows_13
-  - first:
-      213: 4439962630981488657
-    second: windows_14
-  - first:
-      213: -598400287540120639
-    second: windows_15
-  - first:
-      213: 3402032332088086605
-    second: windows_16
-  - first:
-      213: 8209678447503931091
-    second: windows_17
-  - first:
-      213: -1875221967870683628
-    second: windows_18
-  - first:
-      213: 3642879767784128565
-    second: windows_19
-  - first:
-      213: 644556235718001047
-    second: windows_20
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,12 +79,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 443.78134
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -198,7 +171,7 @@ TextureImporter:
       name: windows_1
       rect:
         serializedVersion: 2
-        x: 739
+        x: 1480
         y: 2119
         width: 360
         height: 515
@@ -220,7 +193,7 @@ TextureImporter:
       name: windows_2
       rect:
         serializedVersion: 2
-        x: 1480
+        x: 2960
         y: 2119
         width: 360
         height: 515
@@ -242,9 +215,9 @@ TextureImporter:
       name: windows_3
       rect:
         serializedVersion: 2
-        x: 2220
+        x: 4441
         y: 2119
-        width: 360
+        width: 359
         height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -264,10 +237,10 @@ TextureImporter:
       name: windows_4
       rect:
         serializedVersion: 2
-        x: 2960
-        y: 2119
-        width: 360
-        height: 515
+        x: 0
+        y: 1092
+        width: 359
+        height: 516
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,10 +259,10 @@ TextureImporter:
       name: windows_5
       rect:
         serializedVersion: 2
-        x: 3701
-        y: 2119
+        x: 1480
+        y: 1092
         width: 360
-        height: 515
+        height: 516
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -308,10 +281,10 @@ TextureImporter:
       name: windows_6
       rect:
         serializedVersion: 2
-        x: 4441
-        y: 2119
-        width: 359
-        height: 515
+        x: 2960
+        y: 1092
+        width: 360
+        height: 516
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -330,7 +303,7 @@ TextureImporter:
       name: windows_7
       rect:
         serializedVersion: 2
-        x: 0
+        x: 4441
         y: 1092
         width: 359
         height: 516
@@ -352,10 +325,10 @@ TextureImporter:
       name: windows_8
       rect:
         serializedVersion: 2
-        x: 739
-        y: 1092
-        width: 360
-        height: 516
+        x: 0
+        y: 66
+        width: 359
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -375,9 +348,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1480
-        y: 1092
+        y: 66
         width: 360
-        height: 516
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -396,10 +369,10 @@ TextureImporter:
       name: windows_10
       rect:
         serializedVersion: 2
-        x: 2220
-        y: 1092
+        x: 2960
+        y: 66
         width: 360
-        height: 516
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,10 +391,10 @@ TextureImporter:
       name: windows_11
       rect:
         serializedVersion: 2
-        x: 2960
-        y: 1092
-        width: 360
-        height: 516
+        x: 4441
+        y: 66
+        width: 359
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -436,209 +409,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: windows_12
-      rect:
-        serializedVersion: 2
-        x: 3701
-        y: 1092
-        width: 360
-        height: 516
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6b2a7aa6a1fc7cdc0800000000000000
-      internalID: -3618696063203433802
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: windows_13
-      rect:
-        serializedVersion: 2
-        x: 4441
-        y: 1092
-        width: 359
-        height: 516
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f099fc658126734b0800000000000000
-      internalID: -5460788166488254193
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: windows_14
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 66
-        width: 359
-        height: 515
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 11019ab2d7aed9d30800000000000000
-      internalID: 4439962630981488657
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: windows_15
-      rect:
-        serializedVersion: 2
-        x: 739
-        y: 66
-        width: 360
-        height: 515
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1c3fda3eb1e02b7f0800000000000000
-      internalID: -598400287540120639
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: windows_16
-      rect:
-        serializedVersion: 2
-        x: 1480
-        y: 66
-        width: 360
-        height: 515
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d40118c9162763f20800000000000000
-      internalID: 3402032332088086605
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: windows_17
-      rect:
-        serializedVersion: 2
-        x: 2220
-        y: 66
-        width: 360
-        height: 515
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3d6f6af1d03aee170800000000000000
-      internalID: 8209678447503931091
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: windows_18
-      rect:
-        serializedVersion: 2
-        x: 2960
-        y: 66
-        width: 360
-        height: 515
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4161f0a3e8fd9f5e0800000000000000
-      internalID: -1875221967870683628
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: windows_19
-      rect:
-        serializedVersion: 2
-        x: 3701
-        y: 66
-        width: 360
-        height: 515
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5300b3619db1e8230800000000000000
-      internalID: 3642879767784128565
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: windows_20
-      rect:
-        serializedVersion: 2
-        x: 4441
-        y: 66
-        width: 359
-        height: 515
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7910cbb3b7ce1f800800000000000000
-      internalID: 644556235718001047
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -652,16 +427,7 @@ TextureImporter:
       windows_1: -7713795743161397422
       windows_10: 5415029359018849970
       windows_11: 4104199202459255976
-      windows_12: -3618696063203433802
-      windows_13: -5460788166488254193
-      windows_14: 4439962630981488657
-      windows_15: -598400287540120639
-      windows_16: 3402032332088086605
-      windows_17: 8209678447503931091
-      windows_18: -1875221967870683628
-      windows_19: 3642879767784128565
       windows_2: -6518737003467913481
-      windows_20: 644556235718001047
       windows_3: -8918532497601255057
       windows_4: 8973758733485966575
       windows_5: -5853800035867281755
