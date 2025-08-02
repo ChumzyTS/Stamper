@@ -436,6 +436,7 @@ MonoBehaviour:
   respawnAnchor: {fileID: 0}
   respawnHeight: -15
   fader: {fileID: 8916921505084630349}
+  respawnDelay: 0.5
 --- !u!61 &1732222955427653917
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -548,6 +549,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a951c884a7869c24393708c6ba92d78d, type: 3}
   - {fileID: 8300000, guid: 88d4014d49fa6e4428b8f7f07dde56fb, type: 3}
   - {fileID: 8300000, guid: 81804ae7dfe7979459f0500a8d019eb4, type: 3}
+  - {fileID: 8300000, guid: 21cbd51b71f245a40870d9153f369557, type: 3}
   volumeRange: {x: 0.5, y: 0.7}
   noiseTimeRange: {x: 3, y: 20}
 --- !u!1 &6674431132533773806

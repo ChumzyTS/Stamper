@@ -23,7 +23,7 @@ public class SeagullNoises : MonoBehaviour
     private void ChooseNoise()
     {
         waitTime = math.lerp(noiseTimeRange.x, noiseTimeRange.y, UnityEngine.Random.Range(0f, 1f));
-        noiseIdx = UnityEngine.Random.Range(0, noises.Length - 1);
+        noiseIdx = UnityEngine.Random.Range(0, noises.Length);
         volume = math.lerp(volumeRange.x, volumeRange.y, UnityEngine.Random.Range(0f, 1f));
         currentWaitTime = waitTime;
     }
