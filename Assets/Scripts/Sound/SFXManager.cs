@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class SFXManager : MonoBehaviour
 {
+    public GameObject optionsMenu;
     public static SFXManager Instance;
 
     [SerializeField] private AudioSource SFXObject;
@@ -16,7 +17,7 @@ public class SFXManager : MonoBehaviour
     public void PlaySFXClip(AudioClip audioClip, Transform spawnTransform, float volume)
     {
         AudioSource audioSource = Instantiate(SFXObject, spawnTransform.position, Quaternion.identity);
-
+        double soundVol = optionsMenu.GetComponent<OptionsMenu>().soundVol;
         audioSource.clip = audioClip;
 
         audioSource.volume = volume;
