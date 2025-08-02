@@ -63,6 +63,9 @@ public class PlayerMovement : MonoBehaviour
     [Min(0.01f)]
     private float glideAccelerationTime;
 
+    [SerializeField]
+    private TrailRenderer glideTrail;
+
     [Header("Stamp Setting")]
     [SerializeField]
     [Min(0)]
@@ -140,6 +143,8 @@ public class PlayerMovement : MonoBehaviour
 
         onGround = groundCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
         currentCoyoteTime = onGround ? coyoteTime : (currentCoyoteTime > 0 ? currentCoyoteTime - Time.deltaTime : 0);
+
+        glideTrail.emitting = gliding;
 
         if (onGround && movement == 0)
         {
