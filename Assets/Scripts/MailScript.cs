@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MailScript : MonoBehaviour
 {
@@ -7,7 +8,7 @@ public class MailScript : MonoBehaviour
 
     public void updateMail(Sprite mail)
     {
-        letter.getComponent<SpriteRenderer>().sprite = mail;
+        letter.GetComponent<Image>().sprite = mail;
         letter.SetActive(true);
         return;
     }
