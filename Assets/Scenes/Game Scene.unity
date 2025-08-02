@@ -3642,6 +3642,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 434862211116796085, guid: c024016b63c86544ea92a7f9ad909952, type: 3}
+      propertyPath: SFX
+      value: 
+      objectReference: {fileID: 1205874016}
+    - target: {fileID: 434862211116796085, guid: c024016b63c86544ea92a7f9ad909952, type: 3}
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1338558290}
