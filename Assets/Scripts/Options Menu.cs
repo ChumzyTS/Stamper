@@ -101,7 +101,7 @@ public class OptionsMenu : MonoBehaviour
     {
         musicVol = volume.value * musicScale;
         soundVol = volume.value * soundScale;
-        SFX.GetComponent<SFXManager>().ChangeVolume();
+        SFX.GetComponent<SFXManager>().UpdateVolume();
     }
 
 }
