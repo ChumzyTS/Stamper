@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8764600980370672419}
   - component: {fileID: 4923365326285452174}
   m_Layer: 0
-  m_Name: Frog
+  m_Name: Batthew
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,26 +101,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a9e55afafe4b7419945ca061187c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FName: Frog
+  FName: Batthew
   hasHiddenName: 0
   revealNameAt: 0
-  faceSprite: {fileID: 21300000, guid: 3b86d06d171987e49ac20663008dbb97, type: 3}
+  faceSprite: {fileID: 21300000, guid: 7f03a167e9344c54d96fb7ae960d3f48, type: 3}
   DialogueBox: {fileID: 0}
-  conversationLengths: 0900000001000000
+  conversationLengths: 0600000001000000
   conversations:
-  - "Hi. You\u2019re looking for Frog, right?"
-  - "...Yeah, that\u2019s me. I know, I know. I get that a lot. \u2018Aren\u2019t
-    you a lizard\u2019?"
-  - Well, maybe not all of us have to be named after what kind of animal we are,
-    huh? Ever think of that?
-  - "...Oh! I\u2019m invited to a party?"
-  - "That\u2019ll be nice. An excuse to get out and see people. I haven\u2019t seen
-    anyone else in ten whole years\u2026"
-  - ...Kidding.
-  - Maybe.
-  - Probably.
-  - ...Hey, what are you doing with that stamp-?
-  - Dude, what the hell?
+  - Yeth, I am just hanging around. Can you go now?
+  - What? I have mail?
+  - You thould warn me before you visit nektht time.
+  - ...I could have a thnack to offer you.
+  - "And maybe thome lemonade. It\u2019th hot out."
+  - Ith that a thtamp? Ack-!
+  - Do you really have to thtamp me every time??
 --- !u!61 &4923365326285452174
 BoxCollider2D:
   m_ObjectHideFlags: 0

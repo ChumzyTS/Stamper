@@ -13,6 +13,10 @@ public class FriendDialogue : MonoBehaviour
     private int revealNameIndex;
     [SerializeField]
     private Sprite faceSprite;
+    [SerializeField]
+    private Sprite stampedFaceSprite;
+    [SerializeField]
+    private Sprite stampedWindowSprite;
 
 
     public GameObject DialogueBox;

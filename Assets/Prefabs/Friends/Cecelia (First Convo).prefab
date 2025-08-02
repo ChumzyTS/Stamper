@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8764600980370672419}
   - component: {fileID: 4923365326285452174}
   m_Layer: 0
-  m_Name: Frog
+  m_Name: Cecelia (First Convo)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5a687ac638ddc7a479c0260cf2642c5a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4e9d73cb22cceed4b9e4e0585e6fb8e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,26 +101,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a9e55afafe4b7419945ca061187c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FName: Frog
-  hasHiddenName: 0
+  FName: Cecelia
+  hasHiddenName: 1
   revealNameAt: 0
-  faceSprite: {fileID: 21300000, guid: 3b86d06d171987e49ac20663008dbb97, type: 3}
+  faceSprite: {fileID: 21300000, guid: 70a36183c660e6546b2e24a5ea48da6d, type: 3}
   DialogueBox: {fileID: 0}
   conversationLengths: 0900000001000000
   conversations:
-  - "Hi. You\u2019re looking for Frog, right?"
-  - "...Yeah, that\u2019s me. I know, I know. I get that a lot. \u2018Aren\u2019t
-    you a lizard\u2019?"
-  - Well, maybe not all of us have to be named after what kind of animal we are,
-    huh? Ever think of that?
-  - "...Oh! I\u2019m invited to a party?"
-  - "That\u2019ll be nice. An excuse to get out and see people. I haven\u2019t seen
-    anyone else in ten whole years\u2026"
-  - ...Kidding.
-  - Maybe.
-  - Probably.
-  - ...Hey, what are you doing with that stamp-?
-  - Dude, what the hell?
+  - Hi.
+  - "You\u2019re looking for Cecelia?"
+  - "Aw, that\u2019s my twin sister. Good luck finding her!"
 --- !u!61 &4923365326285452174
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -159,7 +149,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.2, y: 1.2}
+    oldSize: {x: 1.1999999, y: 1.2668041}
     newSize: {x: 33, y: 33}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
