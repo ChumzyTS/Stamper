@@ -1,14 +1,14 @@
 using UnityEngine;
-using static System.Net.Mime.MediaTypeNames;
 
 public class MailScript : MonoBehaviour
 {
     public Sprite mail;
+    public GameObject letter;
 
-    private void updateMail(Sprite mail)
+    public void updateMail(Sprite mail)
     {
-        this.transform.FindChild("Letter").gameObject.GetComponent<SpriteRenderer>().sprite = mail;
-        this.transform.FindChild("Letter").gameObject.SetActive(true);
+        letter.getComponent<SpriteRenderer>().sprite = mail;
+        letter.SetActive(true);
         return;
     }
 }
