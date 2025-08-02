@@ -886,7 +886,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1436,7 +1436,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.2874756}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &470941495205197586
@@ -1857,6 +1857,7 @@ GameObject:
   - component: {fileID: 1592957767606485948}
   - component: {fileID: 8837888756511313921}
   - component: {fileID: 8359925337562397010}
+  - component: {fileID: 434862211116796085}
   m_Layer: 5
   m_Name: Option Menu
   m_TagString: Untagged
@@ -1901,7 +1902,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -1947,6 +1948,28 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &434862211116796085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7345283721866562813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e89cdf7eb9eaf6a498dd8c6fa910a8fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
+  soundUp: {fileID: 3468210918781471515}
+  soundDown: {fileID: 402430352047689384}
+  musicUp: {fileID: 8481466908310109073}
+  musicDown: {fileID: 8817157385938777644}
+  volume: {fileID: 5408175084045512147}
+  musicVol: 1
+  soundVol: 1
+  musicScale: 1
+  soundScale: 1
 --- !u!1 &8248072643855378917
 GameObject:
   m_ObjectHideFlags: 0
