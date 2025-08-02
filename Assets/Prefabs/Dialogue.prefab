@@ -622,3 +622,4 @@ MonoBehaviour:
   textSpeed: 0.1
   conversation: 1
   StampFace: {fileID: 0}
+  MailCarrier: {fileID: 0}
