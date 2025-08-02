@@ -119,9 +119,19 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
     private Animator animator;
-    
+
     // respawn point
+    [Header("Respawn")]
     public GameObject respawnAnchor;
+    [SerializeField]
+    private float respawnHeight;
+    [SerializeField]
+    private Animator fader;
+    [SerializeField]
+    private float respawnDelay = 0.5f;
+    private float currentRespawnDelay;
+
+    private Vector3 initPosition;
 
     public void Awake()
     {
@@ -130,121 +140,140 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         glideTrajectory = glideTrajectory.normalized;
         ChooseIdle();
+        initPosition = transform.position;
     }
 
     public void Update()
     {
-        
-        // Walking Input
-        float movement = Input.GetAxisRaw("Horizontal") * movementSpeed;
-        facingRight = movement == 0 ? facingRight : movement > 0 != startsFacingRight;
-        spriteRenderer.flipX = facingRight;
 
-        animator.SetBool("Walking", movement != 0);
-
-        // Jumping Input
-
-        onGround = groundCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
-        currentCoyoteTime = onGround ? coyoteTime : (currentCoyoteTime > 0 ? currentCoyoteTime - Time.deltaTime : 0);
-
-        glideTrail.emitting = gliding;
-
-        if (onGround && movement == 0)
+        if (currentRespawnDelay > 0)
         {
-            currentIdleWaitTime -= Time.deltaTime;
-            if (currentIdleWaitTime <= 0)
+            currentRespawnDelay -= Time.deltaTime;
+            if (currentRespawnDelay <= 0)
             {
-                animator.SetInteger("RandomIdle", idleNumber);
-                animator.SetTrigger("Idle");
-                ChooseIdle();
+                if (respawnAnchor)
+                {
+                    transform.position = respawnAnchor.transform.position;
+                }
+                else
+                {
+                    transform.position = initPosition;
+                }
             }
         }
         else
         {
-            currentIdleWaitTime = idleWaitTime;
-        }
+            // Walking Input
+            float movement = Input.GetAxisRaw("Horizontal") * movementSpeed;
+            facingRight = movement == 0 ? facingRight : movement > 0 != startsFacingRight;
+            spriteRenderer.flipX = facingRight;
 
-        animator.SetBool("Falling", !onGround);
+            animator.SetBool("Walking", movement != 0);
 
-        animator.SetBool("Gliding", gliding);
+            // Jumping Input
 
-        if (onGround)
-        {
-            if (stamping)
+            onGround = groundCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
+            currentCoyoteTime = onGround ? coyoteTime : (currentCoyoteTime > 0 ? currentCoyoteTime - Time.deltaTime : 0);
+
+            glideTrail.emitting = gliding;
+
+            if (onGround && movement == 0)
             {
-                StopStamping(true);
+                currentIdleWaitTime -= Time.deltaTime;
+                if (currentIdleWaitTime <= 0)
+                {
+                    animator.SetInteger("RandomIdle", idleNumber);
+                    animator.SetTrigger("Idle");
+                    ChooseIdle();
+                }
             }
-            if (gliding)
+            else
+            {
+                currentIdleWaitTime = idleWaitTime;
+            }
+
+            animator.SetBool("Falling", !onGround);
+
+            animator.SetBool("Gliding", gliding);
+
+            if (onGround)
+            {
+                if (stamping)
+                {
+                    StopStamping(true);
+                }
+                if (gliding)
+                {
+                    StopGliding();
+                }
+                extraJumpsLeft = extraJumps;
+            }
+
+            currentJumpRememberanceTime = currentJumpRememberanceTime > 0 ? currentJumpRememberanceTime - Time.deltaTime : 0;
+
+            if (Input.GetKeyDown(jumpKey) && (currentCoyoteTime > 0 || extraJumpsLeft > 0 || currentStampJumpWindow > 0))
+            {
+                // Remember Jump
+                rb.rotation = 0;
+                currentJumpRememberanceTime = jumpRememberanceTime;
+                jumpMult = 1;
+
+
+
+                if (currentStampJumpWindow > 0)
+                {
+                    // Stamp Boosted Jump
+                    SFXManager.Instance.PlaySFXClip(stampSFX, transform, 0.75f);
+                    currentStampJumpWindow = 0;
+                    jumpMult = stampJumpMult;
+                    GameObject newStampDecal = Instantiate(stampDecal);
+                    newStampDecal.transform.position = transform.position - new Vector3(0, 0.5f, 0);
+                    newStampDecal.GetComponent<ParticleSystem>().Emit(150);
+                }
+
+                StopStamping(false);
+                StopGliding();
+            }
+
+
+            // Gliding
+            if (Input.GetKeyDown(glideKey) && !onGround)
+            {
+                StopStamping(false);
+                StartGliding();
+            }
+            if (Input.GetKeyUp(glideKey))
             {
                 StopGliding();
             }
-            extraJumpsLeft = extraJumps;
-        }
 
-        currentJumpRememberanceTime = currentJumpRememberanceTime > 0 ? currentJumpRememberanceTime - Time.deltaTime : 0;
-
-        if (Input.GetKeyDown(jumpKey) && (currentCoyoteTime > 0 || extraJumpsLeft > 0 || currentStampJumpWindow > 0))
-        {
-            // Remember Jump
-            rb.rotation = 0;
-            currentJumpRememberanceTime = jumpRememberanceTime;
-            jumpMult = 1;
-
-
-
-            if (currentStampJumpWindow > 0)
+            if (Input.GetKeyDown(stampKey) && !onGround)
             {
-                // Stamp Boosted Jump
-                SFXManager.Instance.PlaySFXClip(stampSFX, transform, 0.75f);
-                currentStampJumpWindow = 0;
-                jumpMult = stampJumpMult;
-                GameObject newStampDecal = Instantiate(stampDecal);
-                newStampDecal.transform.position = transform.position - new Vector3(0, 0.5f, 0);
-                newStampDecal.GetComponent<ParticleSystem>().Emit(150);
+                StartStamping();
             }
 
-            StopStamping(false);
-            StopGliding();
-        }
+            if (stamping)
+            {
+                StampMovement();
+            }
+            else if (gliding)
+            {
+                GlideMovement(movement);
+            }
+            else
+            {
+                RegularMovement(movement);
+            }
+
+            // Respawn
+            if (Input.GetKeyDown(respawnKey) || transform.position.y < respawnHeight)
+            {
+                Respawn();
+            }
 
 
-        // Gliding
-        if (Input.GetKeyDown(glideKey) && !onGround)
-        {
-            StopStamping(false);
-            StartGliding();
+            currentStampJumpWindow = currentStampJumpWindow > 0 ? currentStampJumpWindow - Time.deltaTime : currentStampJumpWindow;
         }
-        if (Input.GetKeyUp(glideKey))
-        {
-            StopGliding();
-        }
-
-        if (Input.GetKeyDown(stampKey) && !onGround)
-        {
-            StartStamping();
-        }
-
-        if (stamping)
-        {
-            StampMovement();
-        }
-        else if (gliding)
-        {
-            GlideMovement(movement);
-        }
-        else
-        {
-            RegularMovement(movement);
-        }
-
-        // Respawn
-        if (Input.GetKeyDown(respawnKey))
-        {
-            Respawn();
-        }
-
-        currentStampJumpWindow = currentStampJumpWindow > 0 ? currentStampJumpWindow - Time.deltaTime : currentStampJumpWindow;
-
     }
 
     // Stamp
@@ -354,12 +383,12 @@ public class PlayerMovement : MonoBehaviour
 
     public void Respawn()
     {
-        if (respawnAnchor != null)
+        StopAllMovement();
+        if (fader)
         {
-            StopAllMovement();
-            transform.position = respawnAnchor.transform.position;
+            fader.SetTrigger("Respawn");
         }
-
+        currentRespawnDelay = respawnDelay;
     }
 
     // Idle Stuff
