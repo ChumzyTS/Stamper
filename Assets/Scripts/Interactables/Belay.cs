@@ -4,8 +4,10 @@ public class Belay : MonoBehaviour
 {
     [Header("Belay Detection")]
 
+    public BoxCollider2D belayCollider;
     public GameObject player;
     public PlayerMovement pScript;
+    private bool touchingBelay;
     public Sprite StampedSign;
     public Sprite UnstampedSign;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
