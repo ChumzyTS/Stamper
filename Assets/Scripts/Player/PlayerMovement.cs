@@ -99,6 +99,7 @@ public class PlayerMovement : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
+    private Animator animator;
     
     // respawn point
     public GameObject respawnAnchor;
@@ -107,6 +108,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         glideTrajectory = glideTrajectory.normalized;
     }
 
@@ -118,10 +120,16 @@ public class PlayerMovement : MonoBehaviour
         facingRight = movement == 0 ? facingRight : movement > 0 != startsFacingRight;
         spriteRenderer.flipX = facingRight;
 
+        animator.SetBool("Walking", movement != 0);
+
         // Jumping Input
 
         onGround = groundCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
         currentCoyoteTime = onGround ? coyoteTime : (currentCoyoteTime > 0 ? currentCoyoteTime - Time.deltaTime : 0);
+
+        animator.SetBool("Falling", !onGround);
+
+        animator.SetBool("Gliding", gliding);
 
         if (onGround)
         {
@@ -205,6 +213,7 @@ public class PlayerMovement : MonoBehaviour
         StopGliding();
         stamping = true;
         currentStampPauseTime = stampPauseTime;
+        animator.SetTrigger("Stamp");
     }
 
     private void StopStamping(bool jumpable)
@@ -268,6 +277,7 @@ public class PlayerMovement : MonoBehaviour
             // play SFX?
             SFXManager.Instance.PlaySFXClip(jumpSFX, transform, 1f);
             Jump();
+            animator.SetTrigger("Jump");
         }
 
         if (currentJumpTime > 0)
