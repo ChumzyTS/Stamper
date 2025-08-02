@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8764600980370672419}
   - component: {fileID: 4923365326285452174}
   m_Layer: 0
-  m_Name: Batthew
+  m_Name: The Great Sage of the East
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,10 +75,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 264268457
+  m_SortingLayer: -4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 760556855e1b9e645b9cfd691ed8322e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 83dbb12df23f1574abd8b9d4ea7b8ad0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,22 +101,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a9e55afafe4b7419945ca061187c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FName: Batthew
+  FName: The Great Sage of the East
   hasHiddenName: 0
   revealNameAt: 0
-  faceSprite: {fileID: 21300000, guid: 7f03a167e9344c54d96fb7ae960d3f48, type: 3}
-  stampedFaceSprite: {fileID: 21300000, guid: a2a0f8bd13816f341b81f3978e422ed9, type: 3}
-  stampedWindowSprite: {fileID: 21300000, guid: 30110163ee173ab4ea605d5e2eaa38c4, type: 3}
+  faceSprite: {fileID: 21300000, guid: 1b38a1cd86c591d45afe44e3b335b5e0, type: 3}
+  stampedFaceSprite: {fileID: 21300000, guid: 520e94e5f631d1149b836f0f0690fc90, type: 3}
+  stampedWindowSprite: {fileID: 21300000, guid: f3449705e6d606543a6995c9e90d7e56, type: 3}
   DialogueBox: {fileID: 0}
-  conversationLengths: 0600000001000000
+  conversationLengths: 0500000001000000
   conversations:
-  - Yeth, I am just hanging around. Can you go now?
-  - What? I have mail?
-  - You thould warn me before you visit nektht time.
-  - ...I could have a thnack to offer you.
-  - "And maybe thome lemonade. It\u2019th hot out."
-  - Ith that a thtamp? Ack-!
-  - Do you really have to thtamp me every time??
+  - "Yo, \u2018sup, bro. Oh- a package? For me?"
+  - "You\u2019re the best, man!"
+  - "Look, it\u2019s from Gram-gram! A hand-made sweater!"
+  - "I\u2019m gonna get so many compliments at the gym! "
+  - 'Oh, the stamp. Do your thing, pal. '
+  - 'Have a good one, bro. '
 --- !u!61 &4923365326285452174
 BoxCollider2D:
   m_ObjectHideFlags: 0
