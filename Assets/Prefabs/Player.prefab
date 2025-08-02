@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: 1732222955427653917}
   - component: {fileID: 727655150546827285}
   - component: {fileID: 5128985044615072576}
+  - component: {fileID: 5561902879079616544}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -402,6 +403,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5561902879079616544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4197065061086228111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38737ed569b927c4b824179dfb1adaa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  noises:
+  - {fileID: 8300000, guid: 9f93567be0fc2a1469a1bbb63c8b7584, type: 3}
+  - {fileID: 8300000, guid: a951c884a7869c24393708c6ba92d78d, type: 3}
+  - {fileID: 8300000, guid: 88d4014d49fa6e4428b8f7f07dde56fb, type: 3}
+  - {fileID: 8300000, guid: 81804ae7dfe7979459f0500a8d019eb4, type: 3}
+  volumeRange: {x: 0.5, y: 0.7}
+  noiseTimeRange: {x: 3, y: 20}
 --- !u!1 &8754029819416351639
 GameObject:
   m_ObjectHideFlags: 0

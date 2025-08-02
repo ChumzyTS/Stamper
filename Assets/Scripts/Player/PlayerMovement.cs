@@ -195,7 +195,7 @@ public class PlayerMovement : MonoBehaviour
             if (currentStampJumpWindow > 0)
             {
                 // Stamp Boosted Jump
-                SFXManager.Instance.PlaySFXClip(stampSFX, transform, 1f);
+                SFXManager.Instance.PlaySFXClip(stampSFX, transform, 0.75f);
                 currentStampJumpWindow = 0;
                 jumpMult = stampJumpMult;
                 GameObject newStampDecal = Instantiate(stampDecal);
