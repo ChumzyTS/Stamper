@@ -2540,6 +2540,8 @@ MonoBehaviour:
   stampJumpMult: 2.5
   groundCollider: {fileID: 735686086}
   coyoteTime: 0.1
+  idleTimeRange: {x: 3, y: 15}
+  idleAnimationCount: 3
   respawnAnchor: {fileID: 0}
 --- !u!212 &1343385346
 SpriteRenderer:

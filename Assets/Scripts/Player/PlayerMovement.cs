@@ -1,7 +1,5 @@
 using System;
 using Unity.Mathematics;
-using Unity.VisualScripting;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -97,6 +95,18 @@ public class PlayerMovement : MonoBehaviour
     private float currentCoyoteTime;
     private bool onGround;
 
+    [Header("Idle Stuff")]
+    [SerializeField]
+    [Min(0)]
+    private Vector2 idleTimeRange;
+    [SerializeField]
+    [Min(0)]
+    private int idleAnimationCount;
+
+    private float idleWaitTime;
+    private float currentIdleWaitTime;
+    private int idleNumber;
+
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
     private Animator animator;
@@ -110,6 +120,7 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         glideTrajectory = glideTrajectory.normalized;
+        ChooseIdle();
     }
 
     public void Update()
@@ -126,6 +137,21 @@ public class PlayerMovement : MonoBehaviour
 
         onGround = groundCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
         currentCoyoteTime = onGround ? coyoteTime : (currentCoyoteTime > 0 ? currentCoyoteTime - Time.deltaTime : 0);
+
+        if (onGround && movement == 0)
+        {
+            currentIdleWaitTime -= Time.deltaTime;
+            if (currentIdleWaitTime <= 0)
+            {
+                animator.SetInteger("RandomIdle", idleNumber);
+                animator.SetTrigger("Idle");
+                ChooseIdle();
+            }
+        }
+        else
+        {
+            currentIdleWaitTime = idleWaitTime;
+        }
 
         animator.SetBool("Falling", !onGround);
 
@@ -322,7 +348,14 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    
+    // Idle Stuff
+    private void ChooseIdle()
+    {
+        idleWaitTime = math.lerp(idleTimeRange.x, idleTimeRange.y, UnityEngine.Random.Range(0f, 1f));
+        idleNumber = UnityEngine.Random.Range(0, idleAnimationCount);
+        currentIdleWaitTime = idleWaitTime;
+    }
+
 
     // Debug Stuff
     public void OnDrawGizmos()
