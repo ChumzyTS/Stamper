@@ -1371,10 +1371,12 @@ MonoBehaviour:
   jumpKey: 32
   glideKey: 119
   stampKey: 115
+  respawnKey: 114
   movementSpeed: 8
   startsFacingRight: 0
   jumpVelocity: 5
   jumpTime: 0.15
+  jumpSFX: {fileID: 8300000, guid: d6b8b67c6b48f3a4dacaa3a48c936ca6, type: 3}
   extraJumps: 2
   jumpRememberanceTime: 0.1
   glideTrajectory: {x: 3, y: -1}
@@ -1388,6 +1390,7 @@ MonoBehaviour:
   stampJumpMult: 2.5
   groundCollider: {fileID: 1937838409}
   coyoteTime: 0.1
+  respawnAnchor: {fileID: 0}
 --- !u!1 &1209283703
 GameObject:
   m_ObjectHideFlags: 0
