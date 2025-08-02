@@ -1,7 +1,5 @@
 using System;
 using Unity.Mathematics;
-using Unity.VisualScripting;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -97,8 +95,21 @@ public class PlayerMovement : MonoBehaviour
     private float currentCoyoteTime;
     private bool onGround;
 
+    [Header("Idle Stuff")]
+    [SerializeField]
+    [Min(0)]
+    private Vector2 idleTimeRange;
+    [SerializeField]
+    [Min(0)]
+    private int idleAnimationCount;
+
+    private float idleWaitTime;
+    private float currentIdleWaitTime;
+    private int idleNumber;
+
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
+    private Animator animator;
     
     // respawn point
     public GameObject respawnAnchor;
@@ -107,7 +118,9 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         glideTrajectory = glideTrajectory.normalized;
+        ChooseIdle();
     }
 
     public void Update()
@@ -118,10 +131,31 @@ public class PlayerMovement : MonoBehaviour
         facingRight = movement == 0 ? facingRight : movement > 0 != startsFacingRight;
         spriteRenderer.flipX = facingRight;
 
+        animator.SetBool("Walking", movement != 0);
+
         // Jumping Input
 
         onGround = groundCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
         currentCoyoteTime = onGround ? coyoteTime : (currentCoyoteTime > 0 ? currentCoyoteTime - Time.deltaTime : 0);
+
+        if (onGround && movement == 0)
+        {
+            currentIdleWaitTime -= Time.deltaTime;
+            if (currentIdleWaitTime <= 0)
+            {
+                animator.SetInteger("RandomIdle", idleNumber);
+                animator.SetTrigger("Idle");
+                ChooseIdle();
+            }
+        }
+        else
+        {
+            currentIdleWaitTime = idleWaitTime;
+        }
+
+        animator.SetBool("Falling", !onGround);
+
+        animator.SetBool("Gliding", gliding);
 
         if (onGround)
         {
@@ -205,6 +239,7 @@ public class PlayerMovement : MonoBehaviour
         StopGliding();
         stamping = true;
         currentStampPauseTime = stampPauseTime;
+        animator.SetTrigger("Stamp");
     }
 
     private void StopStamping(bool jumpable)
@@ -268,6 +303,7 @@ public class PlayerMovement : MonoBehaviour
             // play SFX?
             SFXManager.Instance.PlaySFXClip(jumpSFX, transform, 1f);
             Jump();
+            animator.SetTrigger("Jump");
         }
 
         if (currentJumpTime > 0)
@@ -312,7 +348,14 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    
+    // Idle Stuff
+    private void ChooseIdle()
+    {
+        idleWaitTime = math.lerp(idleTimeRange.x, idleTimeRange.y, UnityEngine.Random.Range(0f, 1f));
+        idleNumber = UnityEngine.Random.Range(0, idleAnimationCount);
+        currentIdleWaitTime = idleWaitTime;
+    }
+
 
     // Debug Stuff
     public void OnDrawGizmos()
