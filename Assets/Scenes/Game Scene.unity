@@ -3231,6 +3231,7 @@ Transform:
   m_Father: {fileID: 1766440774}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1 &651897469
 GameObject:
   m_ObjectHideFlags: 0
@@ -3318,6 +3319,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 --- !u!4 &673005266 stripped
@@ -10215,9 +10218,13 @@ SceneRoots:
   - {fileID: 264494853}
   - {fileID: 1800864014}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: 1624158208}
   - {fileID: 1503933673}
   - {fileID: 34574504}
+=======
+  - {fileID: 579952596}
+>>>>>>> Stashed changes
 =======
   - {fileID: 579952596}
 >>>>>>> Stashed changes
