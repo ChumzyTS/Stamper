@@ -6,7 +6,6 @@ public class Belay : MonoBehaviour
 
     public BoxCollider2D belayCollider;
     public GameObject player;
-    public PlayerMovement pScript;
     private bool touchingBelay;
     public Sprite StampedSign;
     public Sprite UnstampedSign;
@@ -30,6 +29,10 @@ public class Belay : MonoBehaviour
         
         if (trigger.gameObject == player)
         {
+
+
+            PlayerMovement pScript = player.GetComponent<PlayerMovement>();
+            
             if (pScript.respawnAnchor != gameObject)
             {
                 if (pScript.respawnAnchor != null)
