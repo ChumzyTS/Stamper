@@ -66,7 +66,7 @@ public class PauseMenu : MonoBehaviour
 
     void MainMenu()
     {
-
+        return;
     }
 
     void DisplayOptions ()

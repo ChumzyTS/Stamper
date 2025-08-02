@@ -5,12 +5,15 @@ using UnityEngine;
 
 public class FriendDialogue : MonoBehaviour
 {
+    [Header("Name")]
     public string FName;
     [SerializeField]
     private bool hasHiddenName;
     [SerializeField]
     private int revealNameAt;
     private int revealNameIndex;
+
+    [Header("Sprites")]
     [SerializeField]
     private Sprite faceSprite;
     [SerializeField]
@@ -19,7 +22,9 @@ public class FriendDialogue : MonoBehaviour
     private Sprite windowSprite;
     [SerializeField]
     private Sprite stampedWindowSprite;
+    public Sprite mail;
 
+    [Header("Stamp Info (conv #)")]
     [SerializeField]
     private int friendID;
     [SerializeField]
@@ -29,7 +34,12 @@ public class FriendDialogue : MonoBehaviour
     [SerializeField]
     private int maxStamps;
 
+    [Header("Mail Info (line #)")]
+    [SerializeField]
+    private int mailAt;
+    private int mailIndex;
 
+    [Header("Dialogue Box")]
     public GameObject DialogueBox;
 
 
@@ -47,7 +57,7 @@ public class FriendDialogue : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        gameObject.GetComponent<SpriteRenderer>().sprite = windowSprite;
     }
 
     // Update is called once per frame
@@ -56,14 +66,7 @@ public class FriendDialogue : MonoBehaviour
 
     }
 
-    /*
-    public void StampSprites()
-    {
-        this.faceSprite.sprite = stampedFaceSprite;
-        this.windowSprite.sprite = stampedWindowSprite;
-        return;
-    }
-    */
+    
 
     private void OnMouseDown()
     {
@@ -95,6 +98,26 @@ public class FriendDialogue : MonoBehaviour
                 revealNameIndex = 0;
             }
 
+            // Mailing
+            if (mailAt > -1)
+            {
+                if (location + conversationLengths[conv] > mailAt)
+                {
+                    mailIndex = Math.Max(mailAt - location, -1);
+                }
+                else
+                {
+                    mailIndex = -1;
+                }
+            }
+
+            // Stamping
+            Sprite spriteFace = faceSprite;
+            if (stamps > 0)
+            {
+                spriteFace = stampedFaceSprite;
+            }
+
             bool stampAfter = false;
 
             if (stampAt > -1 && stamps < maxStamps)
@@ -102,12 +125,14 @@ public class FriendDialogue : MonoBehaviour
                 if (stampAt == conv)
                 {
                     stampAfter = true;
+                    stamps++;
                 }
 
             }
-            
 
-            DialogueBox.GetComponent<Dialogue>().StartDialogue(lines, FName, hasHiddenName, revealNameIndex, faceSprite, friendID, stampAfter, gameObject);
+            // Sends Dialogue
+
+            DialogueBox.GetComponent<Dialogue>().StartDialogue(lines, FName, hasHiddenName, revealNameIndex, spriteFace, friendID, stampAfter, gameObject, mailIndex);
             
             if (conversationLengths.Length > conv + 1)
             {
@@ -121,5 +146,9 @@ public class FriendDialogue : MonoBehaviour
         
     }
 
+    public void StampSprite()
+    {
+        gameObject.GetComponent<SpriteRenderer>().sprite = stampedWindowSprite;
+    }
     
 }

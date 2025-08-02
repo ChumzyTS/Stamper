@@ -4,7 +4,6 @@ public class Belay : MonoBehaviour
 {
     [Header("Belay Detection")]
 
-    public BoxCollider2D belayCollider;
     public GameObject player;
     private bool touchingBelay;
     public Sprite StampedSign;

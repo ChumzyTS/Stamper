@@ -23,17 +23,19 @@ public class Dialogue : MonoBehaviour
     private string nameDisplay;
     private string fname;
     private int unhideAt;
+    private int deliverAt = -1;
 
     public GameObject StampFace;
+    public GameObject MailCarrier;
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
 
-    public void StartDialogue(string[] lines, string FName, bool hasHiddenName, int revealNameAt, Sprite faceSprite, int id, bool stampAfter, GameObject friend)
+    public void StartDialogue(string[] lines, string FName, bool hasHiddenName, int revealNameAt, Sprite faceSprite, int id, bool stampAfter, GameObject friend, int mailAt)
     {
         // name
         textComponent.text = string.Empty;
@@ -43,7 +45,8 @@ public class Dialogue : MonoBehaviour
         if (HiddenNameB)
         {
             HiddenNameDisplay();
-        } else
+        }
+        else
         {
             nameDisplay = fname;
         }
@@ -53,9 +56,12 @@ public class Dialogue : MonoBehaviour
         friendObj = friend;
         stamping = stampAfter;
 
+        // mail stuff
+        deliverAt = mailAt;
+
         // set side image
         faceComponent.GetComponent<Image>().sprite = faceSprite;
-        
+
         // read lines
         readLines = lines;
         index = 0;
@@ -83,17 +89,25 @@ public class Dialogue : MonoBehaviour
             {
                 pressed = false;
             }
-                
+
         }
-        
+
 
     }
 
-    
+
 
     IEnumerator TypeLine()
     {
         nameComponent.text = nameDisplay;
+
+        if (deliverAt == index && deliverAt > -1)
+        {
+            Sprite mailImage = friendObj.GetComponent<FriendDialogue>().mail;
+            MailCarrier.GetComponent<MailScript>().giveMail(mailImage);
+            yield return new WaitForSeconds(2);
+
+        }
 
         foreach (char c in readLines[index].ToCharArray())
         {
@@ -104,6 +118,7 @@ public class Dialogue : MonoBehaviour
 
     void NextLine()
     {
+
         if (index < readLines.Length - 1)
         {
             index++;
@@ -123,6 +138,7 @@ public class Dialogue : MonoBehaviour
             {
                 StampFace.SetActive(true);
                 StampFace.GetComponent<StampFace>().StartStampage(friendID);
+                friendObj.GetComponent<FriendDialogue>().StampSprite();
             }
 
             gameObject.SetActive(false);
@@ -133,10 +149,13 @@ public class Dialogue : MonoBehaviour
     {
         if (index >= unhideAt && unhideAt != -1)
         {
-            nameDisplay = fname; 
-        } else
+            nameDisplay = fname;
+        }
+        else
         {
             nameDisplay = "???";
         }
     }
 }
+
+    
