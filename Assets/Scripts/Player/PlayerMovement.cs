@@ -85,6 +85,9 @@ public class PlayerMovement : MonoBehaviour
 
     private bool stamping;
 
+    [SerializeField]
+    private GameObject stampDecal;
+
     [Header("Ground Detection")]
 
     public BoxCollider2D groundCollider;
@@ -178,7 +181,7 @@ public class PlayerMovement : MonoBehaviour
             rb.rotation = 0;
             currentJumpRememberanceTime = jumpRememberanceTime;
             jumpMult = 1;
-            
+
 
 
             if (currentStampJumpWindow > 0)
@@ -186,7 +189,9 @@ public class PlayerMovement : MonoBehaviour
                 // Stamp Boosted Jump
                 currentStampJumpWindow = 0;
                 jumpMult = stampJumpMult;
-                Debug.Log("Stamp Jump");
+                GameObject newStampDecal = Instantiate(stampDecal);
+                newStampDecal.transform.position = transform.position - new Vector3(0, 0.5f, 0);
+                newStampDecal.GetComponent<ParticleSystem>().Emit(150);
             }
 
             StopStamping(false);
