@@ -39,6 +39,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3293437233
+    locked: 0
+  - name: Waves
+    uniqueID: 110301001
+    locked: 0
+  - name: Windows
+    uniqueID: 264268457
+    locked: 0
   - name: Front of Dialogue Box
     uniqueID: 2027954837
     locked: 0
@@ -50,6 +59,15 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 3900832097
+    locked: 0
+  - name: Foreground
+    uniqueID: 3275727229
+    locked: 0
+  - name: Ground
+    uniqueID: 3743232505
     locked: 0
   m_RenderingLayers:
   - Default

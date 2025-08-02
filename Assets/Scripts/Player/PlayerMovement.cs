@@ -91,6 +91,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private GameObject stampDecal;
 
+    [SerializeField]
+    AudioClip stampSFX;
+
     [Header("Ground Detection")]
 
     public BoxCollider2D groundCollider;
@@ -192,6 +195,7 @@ public class PlayerMovement : MonoBehaviour
             if (currentStampJumpWindow > 0)
             {
                 // Stamp Boosted Jump
+                SFXManager.Instance.PlaySFXClip(stampSFX, transform, 1f);
                 currentStampJumpWindow = 0;
                 jumpMult = stampJumpMult;
                 GameObject newStampDecal = Instantiate(stampDecal);
