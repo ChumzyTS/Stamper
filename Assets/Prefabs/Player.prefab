@@ -285,6 +285,7 @@ MonoBehaviour:
   currentStampJumpWindow: 0
   stampJumpMult: 2.5
   stampDecal: {fileID: 3594086205549178855, guid: e49733e641374da409c46d4a99fe5e78, type: 3}
+  stampSFX: {fileID: 8300000, guid: e815378bc6f61004199236e6fc9dbf44, type: 3}
   groundCollider: {fileID: 8144371269985688216}
   coyoteTime: 0.1
   idleTimeRange: {x: 3, y: 15}
