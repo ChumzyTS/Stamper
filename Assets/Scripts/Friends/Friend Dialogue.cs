@@ -16,6 +16,8 @@ public class FriendDialogue : MonoBehaviour
     [SerializeField]
     private Sprite stampedFaceSprite;
     [SerializeField]
+    private Sprite windowSprite;
+    [SerializeField]
     private Sprite stampedWindowSprite;
 
     [SerializeField]
@@ -53,6 +55,15 @@ public class FriendDialogue : MonoBehaviour
     {
 
     }
+
+    /*
+    public void StampSprites()
+    {
+        this.faceSprite.sprite = stampedFaceSprite;
+        this.windowSprite.sprite = stampedWindowSprite;
+        return;
+    }
+    */
 
     private void OnMouseDown()
     {

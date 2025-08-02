@@ -106,7 +106,12 @@ MonoBehaviour:
   revealNameAt: 0
   faceSprite: {fileID: 21300000, guid: 70a36183c660e6546b2e24a5ea48da6d, type: 3}
   stampedFaceSprite: {fileID: 21300000, guid: 9eddaf1dc91433d428efb7e1d2289567, type: 3}
+  windowSprite: {fileID: 21300000, guid: 4e9d73cb22cceed4b9e4e0585e6fb8e0, type: 3}
   stampedWindowSprite: {fileID: 21300000, guid: fa3b9ec59cd637e4e9f1bccc6389c9ab, type: 3}
+  friendID: 0
+  stampAt: 0
+  stamps: 0
+  maxStamps: 0
   DialogueBox: {fileID: 0}
   conversationLengths: 0900000001000000
   conversations:
