@@ -44,13 +44,13 @@ public class PauseMenu : MonoBehaviour
     void Unpause()
     {
         Time.timeScale = 1;
-        postcard.SetActive(false);
-        optionsMenu.SetActive(false);
+        optionsMenu.GetComponent<OptionsMenu>().OptionsInactive();
         paused = false;
         options.onClick.RemoveListener(Unpause);
         mainMenu.onClick.RemoveListener(MainMenu);
         quit.onClick.RemoveListener(EndGame);
         options.onClick.RemoveListener(DisplayOptions);
+        postcard.SetActive(false);
     }
 
     void Pause()
@@ -73,6 +73,7 @@ public class PauseMenu : MonoBehaviour
     {
         postcard.SetActive(false);
         optionsMenu.SetActive(true);
+        optionsMenu.GetComponent<OptionsMenu>().OptionsActive();
     }
 
     void EndGame()
