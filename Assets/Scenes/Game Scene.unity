@@ -2141,7 +2141,7 @@ MonoBehaviour:
   stampKey: 115
   respawnKey: 114
   movementSpeed: 8
-  startsFacingRight: 0
+  startsFacingRight: 1
   jumpVelocity: 5
   jumpTime: 0.15
   extraJumps: 2
