@@ -37,12 +37,12 @@ public class FinaleController : MonoBehaviour
         StartCoroutine(FadeOut(black));
         yield return new WaitForSeconds(waitTime);
         dialogueBox.SetActive(true);
-        dialogueBox.GetComponent<Dialogue>().StartDialogue(convo1, "Cecilia", true, -1, null);
+        dialogueBox.GetComponent<Dialogue>().StartDialogue(convo1, "Cecilia", true, -1, null, 0, false, null);
         while (dialogueBox.activeSelf == true) yield return null;
         SetScene(doorOpen);
         yield return new WaitForSeconds(2);
         dialogueBox.SetActive(true);
-        dialogueBox.GetComponent<Dialogue>().StartDialogue(convo2, "Cecilia", false, -1, faceSprite);
+        dialogueBox.GetComponent<Dialogue>().StartDialogue(convo2, "Cecilia", false, -1, faceSprite, 0, false, null);
         while (dialogueBox.activeSelf == true) yield return null;
     }
 

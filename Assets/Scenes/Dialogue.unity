@@ -144,16 +144,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15757716}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1297845395}
+  m_Father: {fileID: 533120926}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -87, y: 100}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &15757718
@@ -178,7 +178,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -5579834082741855272, guid: fffc98def69076c45b6a76a069832794, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -365,7 +365,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 418, y: 238}
+  m_AnchoredPosition: {x: 485, y: 350}
   m_SizeDelta: {x: 525, y: 269}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &272273727
@@ -390,7 +390,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -8125563557799632123, guid: 6d65608c943a2814baeea787f41ae939, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -431,18 +431,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533120925}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 15757717}
+  - {fileID: 1028215186}
   m_Father: {fileID: 1297845395}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1500, y: 1500}
-  m_Pivot: {x: 0.5, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -200}
+  m_SizeDelta: {x: 2048, y: 2048}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &533120927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,7 +467,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 760556855e1b9e645b9cfd691ed8322e, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -581,16 +583,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028215185}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1297845395}
+  m_Father: {fileID: 533120926}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 338, y: -252}
+  m_AnchoredPosition: {x: 0, y: 163}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1028215187
@@ -615,7 +617,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 3724933988359086334, guid: 68d46468086804e408e8ca52457c4984, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -791,6 +793,12 @@ MonoBehaviour:
   hasHiddenName: 0
   revealNameAt: 0
   faceSprite: {fileID: 21300000, guid: 70a36183c660e6546b2e24a5ea48da6d, type: 3}
+  stampedFaceSprite: {fileID: 0}
+  stampedWindowSprite: {fileID: 0}
+  friendID: 0
+  stampAt: 0
+  stamps: 0
+  maxStamps: 0
   DialogueBox: {fileID: 1897676902}
   conversationLengths: 0200000001000000
   conversations:
@@ -886,7 +894,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1297845392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -916,10 +924,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -965,8 +973,6 @@ RectTransform:
   - {fileID: 640266094}
   - {fileID: 533120926}
   - {fileID: 272273726}
-  - {fileID: 1028215186}
-  - {fileID: 15757717}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -986,7 +992,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97044876b8103604694cacebf345fc07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StampX: 0
+  stamped: 0
+  window: {fileID: 533120925}
+  stampObject: {fileID: 1028215185}
+  stampMarkObject: {fileID: 15757716}
+  stampUI: {fileID: 272273725}
+  friendID: 0
+  currentSprite: {fileID: 0}
+  currentStampX: 0
+  currentStampY: 0
+  currentRotationZ: 0
+  altPos: 0
+  defaultWindowPositionX: 0
+  defaultWindowPositionY: 500
+  altWindowPositionX: 0
+  altWindowPositionY: -200
+  windowPositionX: 0
+  windowPositionY: 0
+  cecelia1Sprite: {fileID: 21300000, guid: 4e9d73cb22cceed4b9e4e0585e6fb8e0, type: 3}
+  cecelia1StampX: 165
+  cecelia1StampY: -335
+  cecelia1RotationZ: 0
+  cecelia1AltPos: 0
+  cecelia2Sprite: {fileID: 0}
+  cecelia2StampX: 0
+  cecelia2StampY: 0
+  cecelia2RotationZ: 0
+  cecelia2AltPos: 0
+  frogSprite: {fileID: 0}
+  frogStampX: 0
+  frogStampY: 0
+  frogRotationZ: 0
+  frogAltPos: 0
+  batthewSprite: {fileID: 21300000, guid: 760556855e1b9e645b9cfd691ed8322e, type: 3}
+  batthewStampX: 0
+  batthewStampY: 0
+  batthewRotationZ: 0
+  batthewAltPos: 1
+  catrinaSprite: {fileID: 0}
+  catrinaStampX: 0
+  catrinaStampY: 0
+  catrinaRotationZ: 0
+  catrinaAltPos: 0
+  pollySprite: {fileID: 0}
+  pollyStampX: 0
+  pollyStampY: 0
+  pollyRotationZ: 0
+  pollyAltPos: 0
+  greatSageOfTheEastSprite: {fileID: 0}
+  greatSageOfTheEastStampX: 0
+  greatSageOfTheEastStampY: 0
+  greatSageOfTheEastRotationZ: 0
+  greatSageOfTheEastAltPos: 0
+  manualPositioningMode: 0
 --- !u!1 &1861794744
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,6 +1229,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5350461795100951768, guid: 44b21b0905f5e234ba1561184c68016b, type: 3}
+      propertyPath: StampFace
+      value: 
+      objectReference: {fileID: 1297845391}
+    - target: {fileID: 5350461795100951768, guid: 44b21b0905f5e234ba1561184c68016b, type: 3}
+      propertyPath: textSpeed
+      value: 0.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1227,6 +1293,10 @@ PrefabInstance:
     - target: {fileID: 3541334880954371171, guid: 11f882a8662a73d4eb6c78514d8db136, type: 3}
       propertyPath: m_Name
       value: Frog
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764600980370672419, guid: 11f882a8662a73d4eb6c78514d8db136, type: 3}
+      propertyPath: maxStamps
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8764600980370672419, guid: 11f882a8662a73d4eb6c78514d8db136, type: 3}
       propertyPath: DialogueBox

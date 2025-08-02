@@ -1,15 +1,23 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+using System.Threading;
 
 public class StampFace : MonoBehaviour
 {
     [SerializeField]
     private bool stamped;
+    private bool pressing;
 
     [Header("Objects")]
     [SerializeField]
-    private float stampObject;
+    private GameObject window;
     [SerializeField]
-    private float stampMarkObject;
+    private GameObject stampObject;
+    [SerializeField]
+    private GameObject stampMarkObject;
+    [SerializeField]
+    private GameObject stampUI;
 
     [Header("CurrentSettings")]
     [SerializeField]
@@ -33,7 +41,12 @@ public class StampFace : MonoBehaviour
     [SerializeField]
     private float altWindowPositionX;
     [SerializeField]
-    private bool altWindowPositionY;
+    private float altWindowPositionY;
+    [SerializeField]
+    private float windowPositionX;
+    [SerializeField]
+    private float windowPositionY;
+
 
     [Header("Cecelia 1 (#0)")]
     [SerializeField]
@@ -119,22 +132,102 @@ public class StampFace : MonoBehaviour
     [SerializeField]
     private bool greatSageOfTheEastAltPos;
 
+    [Header("Debug")]
+    [SerializeField]
+    private bool manualPositioningMode;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        windowPositionX = defaultWindowPositionX;
+        windowPositionY = defaultWindowPositionY;
+        if (manualPositioningMode) {
+            StartStampage(friendID);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        StampWindow(friendID);
+        
+
+        if (!stamped)
+        {
+            if (Input.GetKey(KeyCode.S))
+            {
+                pressing = true;
+            }
+            else
+            {
+                pressing = false;
+            }
+
+
+            if (manualPositioningMode && !pressing)
+            {
+                stampMarkObject.SetActive(true);
+                stampMarkObject.transform.position = Input.mousePosition;
+                currentStampX = stampMarkObject.transform.localPosition.x;
+                currentStampY = stampMarkObject.transform.localPosition.y;
+            }
+            
+        }
+
+        
     }
 
-    void StampWindow(int friendID)
+    public void StartStampage(int id)
+    {
+        friendID = id;
+        StartCoroutine(StampWindow());
+    }
+
+    IEnumerator StampWindow()
     {
         UpdateCurrent(friendID);
+        UpdateScene();
+        stampMarkObject.SetActive(false);
+        stampObject.SetActive(false);
+        
+        stampUI.SetActive(true);
+        while (pressing == false) yield return null;
+        stampObject.SetActive(true);
+        yield return new WaitForSeconds(0.2f);
+        stampObject.transform.localPosition = new Vector2(currentStampX, currentStampY);
+        while (pressing == true) yield return null;
+        
+        // Leave a Mark!
+        stamped = true;
+        stampMarkObject.SetActive(true);
+        UpdateScene();
+        stampUI.SetActive(false);
+
+        yield return new WaitForSeconds(1);
+        stampObject.SetActive(false);
+        yield return new WaitForSeconds(1);
+        gameObject.SetActive(false);
+
+    }
+
+    void UpdateScene()
+    {
+        if (altPos)
+        {
+            windowPositionX = altWindowPositionX;
+            windowPositionY = altWindowPositionY;
+        }
+        else
+        {
+            windowPositionX = defaultWindowPositionX;
+            windowPositionY = defaultWindowPositionY;
+        }
+
+        window.GetComponent<Image>().sprite = currentSprite;
+        stampMarkObject.transform.localPosition = new Vector2(currentStampX, currentStampY);
+        stampMarkObject.transform.Rotate(0, 0, currentRotationZ);
+        stampObject.transform.localPosition = new Vector2(currentStampX + 50, currentStampY + 50);
+        window.transform.localPosition = new Vector2(windowPositionX, windowPositionY);
 
     }
 
@@ -168,7 +261,7 @@ public class StampFace : MonoBehaviour
                 currentStampX = batthewStampX;
                 currentStampY = batthewStampY;
                 currentRotationZ = batthewRotationZ;
-                altPos = frogAltPos;
+                altPos = batthewAltPos;
                 return;
             case 4:
                 currentSprite = catrinaSprite;
@@ -182,7 +275,7 @@ public class StampFace : MonoBehaviour
                 currentStampX = pollyStampX;
                 currentStampY = pollyStampY;
                 currentRotationZ = pollyRotationZ;
-                altPos = catrinaAltPos;
+                altPos = pollyAltPos;
                 return;
             case 6:
                 currentSprite = greatSageOfTheEastSprite;
@@ -192,5 +285,6 @@ public class StampFace : MonoBehaviour
                 altPos = greatSageOfTheEastAltPos;
                 return;
         }
+        
     }
 }

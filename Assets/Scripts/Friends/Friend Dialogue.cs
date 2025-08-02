@@ -18,6 +18,15 @@ public class FriendDialogue : MonoBehaviour
     [SerializeField]
     private Sprite stampedWindowSprite;
 
+    [SerializeField]
+    private int friendID;
+    [SerializeField]
+    private int stampAt;
+    [SerializeField]
+    private int stamps;
+    [SerializeField]
+    private int maxStamps;
+
 
     public GameObject DialogueBox;
 
@@ -74,9 +83,20 @@ public class FriendDialogue : MonoBehaviour
             {
                 revealNameIndex = 0;
             }
+
+            bool stampAfter = false;
+
+            if (stampAt > -1 && stamps < maxStamps)
+            {
+                if (stampAt == conv)
+                {
+                    stampAfter = true;
+                }
+
+            }
             
 
-            DialogueBox.GetComponent<Dialogue>().StartDialogue(lines, FName, hasHiddenName, revealNameIndex, faceSprite);
+            DialogueBox.GetComponent<Dialogue>().StartDialogue(lines, FName, hasHiddenName, revealNameIndex, faceSprite, friendID, stampAfter, gameObject);
             
             if (conversationLengths.Length > conv + 1)
             {

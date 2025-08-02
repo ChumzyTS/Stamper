@@ -15,11 +15,16 @@ public class Dialogue : MonoBehaviour
 
     private int index;
     private bool pressed;
+    private bool stamping;
+    private int friendID;
+    private GameObject friendObj;
     private string[] readLines;
     private bool HiddenNameB;
     private string nameDisplay;
     private string fname;
     private int unhideAt;
+
+    public GameObject StampFace;
 
     void Start()
     {
@@ -28,7 +33,7 @@ public class Dialogue : MonoBehaviour
 
     // Update is called once per frame
 
-    public void StartDialogue(string[] lines, string FName, bool hasHiddenName, int revealNameAt, Sprite faceSprite)
+    public void StartDialogue(string[] lines, string FName, bool hasHiddenName, int revealNameAt, Sprite faceSprite, int id, bool stampAfter, GameObject friend)
     {
         // name
         textComponent.text = string.Empty;
@@ -42,6 +47,11 @@ public class Dialogue : MonoBehaviour
         {
             nameDisplay = fname;
         }
+
+        // stamp stuff
+        friendID = id;
+        friendObj = friend;
+        stamping = stampAfter;
 
         // set side image
         faceComponent.GetComponent<Image>().sprite = faceSprite;
@@ -108,6 +118,13 @@ public class Dialogue : MonoBehaviour
         {
             textComponent.text = string.Empty;
             nameComponent.text = string.Empty;
+
+            if (stamping)
+            {
+                StampFace.SetActive(true);
+                StampFace.GetComponent<StampFace>().StartStampage(friendID);
+            }
+
             gameObject.SetActive(false);
         }
     }
