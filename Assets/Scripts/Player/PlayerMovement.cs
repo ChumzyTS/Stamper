@@ -10,9 +10,13 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField]
     private KeyCode glideKey = KeyCode.W;
+    [SerializeField]
+    private KeyCode glideAltKey = KeyCode.UpArrow;
 
     [SerializeField]
     private KeyCode stampKey = KeyCode.S;
+    [SerializeField]
+    private KeyCode stampAltKey = KeyCode.DownArrow;
 
     [SerializeField]
     private KeyCode respawnKey = KeyCode.R;
@@ -240,17 +244,17 @@ public class PlayerMovement : MonoBehaviour
 
 
             // Gliding
-            if (Input.GetKeyDown(glideKey) && !onGround)
+            if ((Input.GetKeyDown(glideKey) || Input.GetKeyDown(glideAltKey)) && !onGround)
             {
                 StopStamping(false);
                 StartGliding();
             }
-            if (Input.GetKeyUp(glideKey))
+            if (Input.GetKeyUp(glideKey) || Input.GetKeyUp(glideAltKey))
             {
                 StopGliding();
             }
 
-            if (Input.GetKeyDown(stampKey) && !onGround)
+            if ((Input.GetKeyDown(stampKey) || Input.GetKeyDown(stampAltKey)) && !onGround)
             {
                 StartStamping();
             }

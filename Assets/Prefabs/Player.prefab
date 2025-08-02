@@ -552,6 +552,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 88d4014d49fa6e4428b8f7f07dde56fb, type: 3}
   - {fileID: 8300000, guid: 81804ae7dfe7979459f0500a8d019eb4, type: 3}
   - {fileID: 8300000, guid: 21cbd51b71f245a40870d9153f369557, type: 3}
+  - {fileID: 8300000, guid: 87c5e468c08313c4899b006e62a3d265, type: 3}
   volumeRange: {x: 0.5, y: 0.7}
   noiseTimeRange: {x: 3, y: 20}
 --- !u!1 &6304769630751773540
