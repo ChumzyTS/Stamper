@@ -147,6 +147,10 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         glideTrajectory = glideTrajectory.normalized;
         ChooseIdle();
+    }
+
+    public void Start()
+    {
         initPosition = transform.position;
     }
 
