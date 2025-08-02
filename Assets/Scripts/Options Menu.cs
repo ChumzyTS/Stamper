@@ -9,6 +9,7 @@ public class OptionsMenu : MonoBehaviour
     
     
     public GameObject pauseMenu;
+    public GameObject SFX;
 
     [Header("Buttons")]
     [SerializeField]
@@ -72,7 +73,7 @@ public class OptionsMenu : MonoBehaviour
                 soundScale = 1;
             }
         }
-        soundVol = volume.value * soundScale;
+        VolumeChange();
     }
 
     void music(int musicChange)
@@ -93,13 +94,14 @@ public class OptionsMenu : MonoBehaviour
             }
         }
 
-        musicVol = volume.value * musicScale;
+        VolumeChange();
     }
 
     void VolumeChange()
     {
         musicVol = volume.value * musicScale;
         soundVol = volume.value * soundScale;
+        SFX.GetComponent<SFXManager>().UpdateVolume();
     }
 
 }
