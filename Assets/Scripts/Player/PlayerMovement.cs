@@ -46,6 +46,9 @@ public class PlayerMovement : MonoBehaviour
     private float jumpRememberanceTime = 0.02f;
     private float currentJumpRememberanceTime;
 
+    [SerializeField]
+    private ParticleSystem flapParticles;
+
     [Header("Glide Settings")]
 
     [SerializeField]
@@ -345,6 +348,10 @@ public class PlayerMovement : MonoBehaviour
             // Jump!
             // play SFX?
             SFXManager.Instance.PlaySFXClip(jumpSFX, transform, 1f);
+            if (flapParticles && currentCoyoteTime <= 0)
+            {
+                flapParticles.Emit(20);   
+            }
             Jump();
             animator.SetTrigger("Jump");
         }
