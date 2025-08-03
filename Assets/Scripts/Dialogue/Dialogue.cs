@@ -73,6 +73,7 @@ public class Dialogue : MonoBehaviour
         if (Input.GetKey(KeyCode.F) && pressed == false)
         {
             pressed = true;
+
             if (textComponent.text == readLines[index])
             {
                 NextLine();
