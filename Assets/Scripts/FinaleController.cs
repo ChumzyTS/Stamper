@@ -10,6 +10,7 @@ public class FinaleController : MonoBehaviour
     public Sprite doorClosed;
     public Sprite doorOpen;
     public GameObject dialogueBox;
+    public Sprite mail;
     [SerializeField]
     private Sprite faceSprite;
     [SerializeField]
@@ -37,12 +38,12 @@ public class FinaleController : MonoBehaviour
         StartCoroutine(FadeOut(black));
         yield return new WaitForSeconds(waitTime);
         dialogueBox.SetActive(true);
-        dialogueBox.GetComponent<Dialogue>().StartDialogue(convo1, "Cecilia", true, -1, null, 0, false, null, -1);
+        dialogueBox.GetComponent<Dialogue>().StartDialogue(convo1, "Cecilia", true, -1, null, 7, false, null, -1, mail);
         while (dialogueBox.activeSelf == true) yield return null;
         SetScene(doorOpen);
         yield return new WaitForSeconds(2);
         dialogueBox.SetActive(true);
-        dialogueBox.GetComponent<Dialogue>().StartDialogue(convo2, "Cecilia", false, -1, faceSprite, 0, false, null, -1);
+        dialogueBox.GetComponent<Dialogue>().StartDialogue(convo2, "Cecilia", false, -1, faceSprite, 7, true, null, 3, mail);
         while (dialogueBox.activeSelf == true) yield return null;
     }
 

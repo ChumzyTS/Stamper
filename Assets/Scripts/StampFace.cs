@@ -132,6 +132,18 @@ public class StampFace : MonoBehaviour
     [SerializeField]
     private bool greatSageOfTheEastAltPos;
 
+    [Header("Mark (#7)")]
+    [SerializeField]
+    private Sprite markSprite;
+    [SerializeField]
+    private float markStampX;
+    [SerializeField]
+    private float markStampY;
+    [SerializeField]
+    private float markRotationZ;
+    [SerializeField]
+    private bool markAltPos;
+
     [Header("Debug")]
     [SerializeField]
     private bool manualPositioningMode;
@@ -283,6 +295,13 @@ public class StampFace : MonoBehaviour
                 currentStampY = greatSageOfTheEastStampY;
                 currentRotationZ = greatSageOfTheEastRotationZ;
                 altPos = greatSageOfTheEastAltPos;
+                return;
+            case 7:
+                currentSprite = markSprite;
+                currentStampX = markStampX;
+                currentStampY = markStampY;
+                currentRotationZ = markRotationZ;
+                altPos = markAltPos;
                 return;
         }
         

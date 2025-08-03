@@ -27,6 +27,7 @@ public class Dialogue : MonoBehaviour
 
     public GameObject StampFace;
     public GameObject MailCarrier;
+    private Sprite mailSprite;
 
     void Start()
     {
@@ -35,7 +36,7 @@ public class Dialogue : MonoBehaviour
 
     // Update is called once per frame
 
-    public void StartDialogue(string[] lines, string FName, bool hasHiddenName, int revealNameAt, Sprite faceSprite, int id, bool stampAfter, GameObject friend, int mailAt)
+    public void StartDialogue(string[] lines, string FName, bool hasHiddenName, int revealNameAt, Sprite faceSprite, int id, bool stampAfter, GameObject friend, int mailAt, Sprite mail)
     {
         // name
         textComponent.text = string.Empty;
@@ -58,6 +59,7 @@ public class Dialogue : MonoBehaviour
 
         // mail stuff
         deliverAt = mailAt;
+        mailSprite = mail;
 
         // set side image
         faceComponent.GetComponent<Image>().sprite = faceSprite;
@@ -104,8 +106,8 @@ public class Dialogue : MonoBehaviour
 
         if (deliverAt == index && deliverAt > -1)
         {
-            Sprite mailImage = friendObj.GetComponent<FriendDialogue>().mail;
-            MailCarrier.GetComponent<MailScript>().giveMail(mailImage);
+            
+            MailCarrier.GetComponent<MailScript>().giveMail(mailSprite);
             yield return new WaitForSeconds(2);
 
         }
@@ -139,7 +141,13 @@ public class Dialogue : MonoBehaviour
             {
                 StampFace.SetActive(true);
                 StampFace.GetComponent<StampFace>().StartStampage(friendID);
-                friendObj.GetComponent<FriendDialogue>().StampSprite();
+                if (friendObj != null)
+                {
+
+                    friendObj.GetComponent<SpriteRenderer>().sprite = friendObj.GetComponent<FriendDialogue>().stampedWindowSprite;
+                }
+                
+                
             }
 
             gameObject.SetActive(false);

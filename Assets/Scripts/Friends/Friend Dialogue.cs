@@ -20,8 +20,8 @@ public class FriendDialogue : MonoBehaviour
     private Sprite stampedFaceSprite;
     [SerializeField]
     private Sprite windowSprite;
-    [SerializeField]
-    private Sprite stampedWindowSprite;
+    
+    public Sprite stampedWindowSprite;
     public Sprite mail;
 
     [Header("Stamp Info (conv #)")]
@@ -132,7 +132,7 @@ public class FriendDialogue : MonoBehaviour
 
             // Sends Dialogue
 
-            DialogueBox.GetComponent<Dialogue>().StartDialogue(lines, FName, hasHiddenName, revealNameIndex, spriteFace, friendID, stampAfter, gameObject, mailIndex);
+            DialogueBox.GetComponent<Dialogue>().StartDialogue(lines, FName, hasHiddenName, revealNameIndex, spriteFace, friendID, stampAfter, gameObject, mailIndex, mail);
             
             if (conversationLengths.Length > conv + 1)
             {
@@ -146,9 +146,6 @@ public class FriendDialogue : MonoBehaviour
         
     }
 
-    public void StampSprite()
-    {
-        gameObject.GetComponent<SpriteRenderer>().sprite = stampedWindowSprite;
-    }
+    
     
 }
