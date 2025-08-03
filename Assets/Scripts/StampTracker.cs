@@ -13,6 +13,10 @@ public class StampTracker : MonoBehaviour
     [SerializeField]
     private Sprite openDoor;
 
+    public void Start()
+    {
+        UpdateCounter(0);
+    }
     public void UpdateCounter(int addStamp)
     {
         stamped += addStamp;

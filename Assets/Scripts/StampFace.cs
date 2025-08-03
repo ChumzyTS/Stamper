@@ -19,7 +19,7 @@ public class StampFace : MonoBehaviour
     [SerializeField]
     private GameObject stampUI;
     [SerializeField]
-    private GameObject stampTracker;
+    public GameObject stampTracker;
 
     [Header("CurrentSettings")]
     [SerializeField]

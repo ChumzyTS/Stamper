@@ -3977,7 +3977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1705189009232670104, guid: 44b21b0905f5e234ba1561184c68016b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1950110623467141900, guid: 44b21b0905f5e234ba1561184c68016b, type: 3}
       propertyPath: m_Pivot.x
@@ -4067,6 +4067,10 @@ PrefabInstance:
       propertyPath: MailCarrier
       value: 
       objectReference: {fileID: 407339249}
+    - target: {fileID: 8470285434036736391, guid: 44b21b0905f5e234ba1561184c68016b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6008,6 +6012,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: {fileID: 1394776024}
+  animator: {fileID: 0}
+  deliverSfx: {fileID: 0}
 --- !u!114 &407339251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21851,7 +21857,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bfc0b961444bc24f93ef178f1606cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unlocked: {fileID: 0}
   sceneName: House
+  fader: {fileID: 0}
+  fadeOutTime: 0
+  player: {fileID: 0}
+  open: 0
 --- !u!212 &1473745185
 SpriteRenderer:
   m_ObjectHideFlags: 0

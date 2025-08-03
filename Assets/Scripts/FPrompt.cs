@@ -28,7 +28,6 @@ public class FPrompt : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log(dialogueBox.activeSelf);
         if ((Input.GetKeyDown(KeyCode.F) && colliding) && dialogueBox.activeSelf == false)
         {
 
