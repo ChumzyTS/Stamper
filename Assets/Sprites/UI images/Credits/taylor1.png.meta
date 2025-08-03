@@ -1,0 +1,624 @@
+fileFormatVersion: 2
+guid: b91acdd31c4463947915025fc57f77ce
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1753390025881800091
+    second: taylor1_0
+  - first:
+      213: -6253675800929492115
+    second: taylor1_1
+  - first:
+      213: 3327876381797095387
+    second: taylor1_2
+  - first:
+      213: 3797431070042952716
+    second: taylor1_3
+  - first:
+      213: 1565890957359432398
+    second: taylor1_4
+  - first:
+      213: 7053683086391595293
+    second: taylor1_5
+  - first:
+      213: 3000339818789049365
+    second: taylor1_6
+  - first:
+      213: 773898530705101845
+    second: taylor1_7
+  - first:
+      213: 588981247750866334
+    second: taylor1_8
+  - first:
+      213: 281069019660497789
+    second: taylor1_9
+  - first:
+      213: 5928110796556236502
+    second: taylor1_10
+  - first:
+      213: -5237173924171768223
+    second: taylor1_11
+  - first:
+      213: -4567123983537408874
+    second: taylor1_12
+  - first:
+      213: -1902444734282612036
+    second: taylor1_13
+  - first:
+      213: 69504412659695650
+    second: taylor1_14
+  - first:
+      213: -5927470309711968150
+    second: taylor1_15
+  - first:
+      213: -6811333940379635640
+    second: taylor1_16
+  - first:
+      213: 2574250391126533819
+    second: taylor1_17
+  - first:
+      213: 3711964433996548698
+    second: taylor1_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: taylor1_0
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 498
+        width: 148
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9dc56d40fa455810800000000000000
+      internalID: 1753390025881800091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taylor1_1
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 554
+        width: 106
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6324211efa7639a0800000000000000
+      internalID: -6253675800929492115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taylor1_2
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 619
+        width: 99
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd79d69ffedfe2e20800000000000000
+      internalID: 3327876381797095387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taylor1_3
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 499
+        width: 93
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0411f4407f23b430800000000000000
+      internalID: 3797431070042952716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taylor1_4
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 533
+        width: 67
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec2c76e77892bb510800000000000000
+      internalID: 1565890957359432398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taylor1_5
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 594
+        width: 64
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d115d822567b3e160800000000000000
+      internalID: 7053683086391595293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taylor1_6
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 573
+        width: 282
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51491603b2953a920800000000000000
+      internalID: 3000339818789049365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taylor1_7
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 320
+        width: 102
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 514dfd60d907dba00800000000000000
+      internalID: 773898530705101845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taylor1_8
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 472
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e958e83035b7c2800800000000000000
+      internalID: 588981247750866334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taylor1_9
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 390
+        width: 66
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d733b32c8ce86e300800000000000000
+      internalID: 281069019660497789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taylor1_10
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 423
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d674e96c51e44250800000000000000
+      internalID: 5928110796556236502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taylor1_11
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 466
+        width: 70
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16e9dce4012d157b0800000000000000
+      internalID: -5237173924171768223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taylor1_12
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 360
+        width: 43
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 694f5144fe05e90c0800000000000000
+      internalID: -4567123983537408874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taylor1_13
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 158
+        width: 35
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb2c54008982995e0800000000000000
+      internalID: -1902444734282612036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taylor1_14
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 105
+        width: 194
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22047e225ede6f000800000000000000
+      internalID: 69504412659695650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taylor1_15
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 136
+        width: 97
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6881fc88256dbda0800000000000000
+      internalID: -5927470309711968150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taylor1_16
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 75
+        width: 103
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8403c158ed74971a0800000000000000
+      internalID: -6811333940379635640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taylor1_17
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 191
+        width: 61
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb6e10e771399b320800000000000000
+      internalID: 2574250391126533819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taylor1_18
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 208
+        width: 70
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5a8f336cfb838330800000000000000
+      internalID: 3711964433996548698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      taylor1_0: 1753390025881800091
+      taylor1_1: -6253675800929492115
+      taylor1_10: 5928110796556236502
+      taylor1_11: -5237173924171768223
+      taylor1_12: -4567123983537408874
+      taylor1_13: -1902444734282612036
+      taylor1_14: 69504412659695650
+      taylor1_15: -5927470309711968150
+      taylor1_16: -6811333940379635640
+      taylor1_17: 2574250391126533819
+      taylor1_18: 3711964433996548698
+      taylor1_2: 3327876381797095387
+      taylor1_3: 3797431070042952716
+      taylor1_4: 1565890957359432398
+      taylor1_5: 7053683086391595293
+      taylor1_6: 3000339818789049365
+      taylor1_7: 773898530705101845
+      taylor1_8: 588981247750866334
+      taylor1_9: 281069019660497789
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

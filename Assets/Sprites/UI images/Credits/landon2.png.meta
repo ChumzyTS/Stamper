@@ -1,0 +1,728 @@
+fileFormatVersion: 2
+guid: 99af02d9c581537459d1ef3b5b51111d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1442045047939519070
+    second: landon2_0
+  - first:
+      213: -1066371136241665064
+    second: landon2_1
+  - first:
+      213: -5379388247328884020
+    second: landon2_2
+  - first:
+      213: 6928072057074838682
+    second: landon2_3
+  - first:
+      213: 5633208034610961016
+    second: landon2_4
+  - first:
+      213: 3386040862614466973
+    second: landon2_5
+  - first:
+      213: -731620773729843796
+    second: landon2_6
+  - first:
+      213: -2672724235142075246
+    second: landon2_7
+  - first:
+      213: -4276198400731716164
+    second: landon2_8
+  - first:
+      213: -5679269790876861175
+    second: landon2_9
+  - first:
+      213: -5846939725076169935
+    second: landon2_10
+  - first:
+      213: 7134817629924922338
+    second: landon2_11
+  - first:
+      213: 5274339366656845155
+    second: landon2_12
+  - first:
+      213: 5819222681597035535
+    second: landon2_13
+  - first:
+      213: -4898022318119540753
+    second: landon2_14
+  - first:
+      213: 841185051701979182
+    second: landon2_15
+  - first:
+      213: 9043262765934471081
+    second: landon2_16
+  - first:
+      213: -1340778692190540323
+    second: landon2_17
+  - first:
+      213: -3451814499512688180
+    second: landon2_18
+  - first:
+      213: 5051597825898488166
+    second: landon2_19
+  - first:
+      213: 274797133920786030
+    second: landon2_20
+  - first:
+      213: 8602222513884174968
+    second: landon2_21
+  - first:
+      213: -6205671792007917937
+    second: landon2_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: landon2_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 661
+        width: 107
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ad247f4ba3dcfbe0800000000000000
+      internalID: -1442045047939519070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landon2_1
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 687
+        width: 69
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dbf599f91d7331f0800000000000000
+      internalID: -1066371136241665064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landon2_2
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 711
+        width: 92
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccafc09e3e29855b0800000000000000
+      internalID: -5379388247328884020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landon2_3
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 726
+        width: 66
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9c614454d4752060800000000000000
+      internalID: 6928072057074838682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landon2_4
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 744
+        width: 63
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87adcd88cdc2d2e40800000000000000
+      internalID: 5633208034610961016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landon2_5
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 754
+        width: 67
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d91b71b7932adfe20800000000000000
+      internalID: 3386040862614466973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landon2_6
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 639
+        width: 74
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca5498758c2c8d5f0800000000000000
+      internalID: -731620773729843796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landon2_7
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 682
+        width: 62
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29c67c5087398ead0800000000000000
+      internalID: -2672724235142075246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landon2_8
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 702
+        width: 63
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb5ea47f534e7a4c0800000000000000
+      internalID: -4276198400731716164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landon2_9
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 535
+        width: 312
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90d7d2b173e2f21b0800000000000000
+      internalID: -5679269790876861175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landon2_10
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 435
+        width: 125
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13bf6b76c4f7bdea0800000000000000
+      internalID: -5846939725076169935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landon2_11
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 476
+        width: 100
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e39ed025d6f30360800000000000000
+      internalID: 7134817629924922338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landon2_12
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 507
+        width: 69
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 365a07695b7323940800000000000000
+      internalID: 5274339366656845155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landon2_13
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 549
+        width: 72
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f04cc75823802c050800000000000000
+      internalID: 5819222681597035535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landon2_14
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 520
+        width: 66
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe7ac8a07aab60cb0800000000000000
+      internalID: -4898022318119540753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landon2_15
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 592
+        width: 67
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e28a015095d7cab00800000000000000
+      internalID: 841185051701979182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landon2_16
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 618
+        width: 67
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a76a06829f108d70800000000000000
+      internalID: 9043262765934471081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landon2_17
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 129
+        width: 146
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddde19912e8946de0800000000000000
+      internalID: -1340778692190540323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landon2_18
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 158
+        width: 93
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc1e00e4001b810d0800000000000000
+      internalID: -3451814499512688180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landon2_19
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 165
+        width: 97
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 661a0d84571ea1640800000000000000
+      internalID: 5051597825898488166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landon2_20
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 150
+        width: 100
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e66d4a0998640d300800000000000000
+      internalID: 274797133920786030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landon2_21
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 167
+        width: 76
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87a1fe2cccb316770800000000000000
+      internalID: 8602222513884174968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: landon2_22
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 154
+        width: 87
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8ec4bc526601e9a0800000000000000
+      internalID: -6205671792007917937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      landon2_0: -1442045047939519070
+      landon2_1: -1066371136241665064
+      landon2_10: -5846939725076169935
+      landon2_11: 7134817629924922338
+      landon2_12: 5274339366656845155
+      landon2_13: 5819222681597035535
+      landon2_14: -4898022318119540753
+      landon2_15: 841185051701979182
+      landon2_16: 9043262765934471081
+      landon2_17: -1340778692190540323
+      landon2_18: -3451814499512688180
+      landon2_19: 5051597825898488166
+      landon2_2: -5379388247328884020
+      landon2_20: 274797133920786030
+      landon2_21: 8602222513884174968
+      landon2_22: -6205671792007917937
+      landon2_3: 6928072057074838682
+      landon2_4: 5633208034610961016
+      landon2_5: 3386040862614466973
+      landon2_6: -731620773729843796
+      landon2_7: -2672724235142075246
+      landon2_8: -4276198400731716164
+      landon2_9: -5679269790876861175
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
