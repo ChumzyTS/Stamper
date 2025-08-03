@@ -18,6 +18,8 @@ public class StampFace : MonoBehaviour
     private GameObject stampMarkObject;
     [SerializeField]
     private GameObject stampUI;
+    [SerializeField]
+    private GameObject stampTracker;
 
     [Header("CurrentSettings")]
     [SerializeField]
@@ -211,6 +213,10 @@ public class StampFace : MonoBehaviour
         
         // Leave a Mark!
         stamped = true;
+
+        // right here
+        stampTracker.GetComponent<StampTracker>().UpdateCounter(1);
+
         stampMarkObject.SetActive(true);
         UpdateScene();
         stampUI.SetActive(false);
