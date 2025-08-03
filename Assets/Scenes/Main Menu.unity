@@ -757,7 +757,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Stamped
+  m_text: Stamper
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2de933c066220a14f829ecddad588b96, type: 2}
   m_sharedMaterial: {fileID: 7018174676684705781, guid: 2de933c066220a14f829ecddad588b96, type: 2}
@@ -3265,7 +3265,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Stamped
+  m_text: 'Stamper
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2de933c066220a14f829ecddad588b96, type: 2}
   m_sharedMaterial: {fileID: 7018174676684705781, guid: 2de933c066220a14f829ecddad588b96, type: 2}
