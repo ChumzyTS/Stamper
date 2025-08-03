@@ -388,7 +388,7 @@ public class PlayerMovement : MonoBehaviour
         currentCoyoteTime = 0;
     }
 
-    private void StopAllMovement()
+    public void StopAllMovement()
     {
         StopGliding();
         StopStamping(false);
