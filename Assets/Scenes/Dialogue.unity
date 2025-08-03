@@ -706,6 +706,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letter: {fileID: 1860857409}
+  animator: {fileID: 0}
+  deliverSfx: {fileID: 0}
 --- !u!114 &1930952924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -809,6 +811,14 @@ PrefabInstance:
       propertyPath: frogSprite
       value: 
       objectReference: {fileID: 21300000, guid: 5a687ac638ddc7a479c0260cf2642c5a, type: 3}
+    - target: {fileID: 7086560874616785049, guid: 4431277052a3d7e45a182983f3e184cb, type: 3}
+      propertyPath: markSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fcd36b61c59c2b94db70c2a4ef8ae06a, type: 3}
+    - target: {fileID: 7086560874616785049, guid: 4431277052a3d7e45a182983f3e184cb, type: 3}
+      propertyPath: newStampMark
+      value: 
+      objectReference: {fileID: -5579834082741855272, guid: fffc98def69076c45b6a76a069832794, type: 3}
     - target: {fileID: 7152128929710488131, guid: 4431277052a3d7e45a182983f3e184cb, type: 3}
       propertyPath: m_Pivot.x
       value: 0

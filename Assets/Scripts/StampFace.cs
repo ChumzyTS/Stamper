@@ -145,6 +145,8 @@ public class StampFace : MonoBehaviour
     private float markRotationZ;
     [SerializeField]
     private bool markAltPos;
+    [SerializeField]
+    private Sprite newStampMark;
 
     [Header("Debug")]
     [SerializeField]
@@ -203,6 +205,11 @@ public class StampFace : MonoBehaviour
         UpdateScene();
         stampMarkObject.SetActive(false);
         stampObject.SetActive(false);
+
+        if (friendID == 7)
+        {
+            stampMarkObject.GetComponent<Image>().sprite = newStampMark;
+        }
         
         stampUI.SetActive(true);
         while (pressing == false) yield return null;

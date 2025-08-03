@@ -320,6 +320,10 @@ PrefabInstance:
       value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 7086560874616785049, guid: 4431277052a3d7e45a182983f3e184cb, type: 3}
+      propertyPath: newStampMark
+      value: 
+      objectReference: {fileID: 4737148727796095973, guid: 500970436000d3e4296e4bbf63f7a46d, type: 3}
+    - target: {fileID: 7086560874616785049, guid: 4431277052a3d7e45a182983f3e184cb, type: 3}
       propertyPath: stampTracker
       value: 
       objectReference: {fileID: 376790892}
