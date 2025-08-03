@@ -31815,6 +31815,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: VictoryDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 7864346016299610052, guid: 8f47e78d65a9d3f40ba3d44f6715d468, type: 3}
+      propertyPath: fader
+      value: 
+      objectReference: {fileID: 1745093270}
+    - target: {fileID: 7864346016299610052, guid: 8f47e78d65a9d3f40ba3d44f6715d468, type: 3}
+      propertyPath: fadeOutTime
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
