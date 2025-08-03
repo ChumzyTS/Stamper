@@ -1768,7 +1768,7 @@ PrefabInstance:
       objectReference: {fileID: 159856538}
     - target: {fileID: 5350461795100951768, guid: 44b21b0905f5e234ba1561184c68016b, type: 3}
       propertyPath: textSpeed
-      value: 0.05
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 5350461795100951768, guid: 44b21b0905f5e234ba1561184c68016b, type: 3}
       propertyPath: MailCarrier

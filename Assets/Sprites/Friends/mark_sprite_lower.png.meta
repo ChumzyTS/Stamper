@@ -116,10 +116,10 @@ TextureImporter:
       name: mark_sprite_lower_0
       rect:
         serializedVersion: 2
-        x: 239
-        y: 49
-        width: 436
-        height: 687
+        x: 250
+        y: 52
+        width: 414
+        height: 673
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
