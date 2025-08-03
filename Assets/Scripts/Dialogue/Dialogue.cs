@@ -29,6 +29,9 @@ public class Dialogue : MonoBehaviour
     public GameObject MailCarrier;
     private Sprite mailSprite;
 
+    [SerializeField]
+    private PlayerMovement playerMovement;
+
     void Start()
     {
 
@@ -38,6 +41,11 @@ public class Dialogue : MonoBehaviour
 
     public void StartDialogue(string[] lines, string FName, bool hasHiddenName, int revealNameAt, Sprite faceSprite, int id, bool stampAfter, GameObject friend, int mailAt, Sprite mail)
     {
+        if (playerMovement)
+        {
+            playerMovement.StopAllMovement();
+            playerMovement.enabled = false;
+        }
         // name
         textComponent.text = string.Empty;
         fname = FName;
@@ -150,6 +158,10 @@ public class Dialogue : MonoBehaviour
                 
             }
 
+            if (playerMovement)
+            {
+                playerMovement.enabled = true;
+            }
             gameObject.SetActive(false);
         }
     }
