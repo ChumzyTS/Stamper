@@ -26373,6 +26373,10 @@ PrefabInstance:
       value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 8764600980370672419, guid: 55ab5ce5ca7bddc4596ac5f4037d8938, type: 3}
+      propertyPath: mailAt
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764600980370672419, guid: 55ab5ce5ca7bddc4596ac5f4037d8938, type: 3}
       propertyPath: maxStamps
       value: 1
       objectReference: {fileID: 0}
