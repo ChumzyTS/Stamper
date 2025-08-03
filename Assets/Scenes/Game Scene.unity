@@ -3621,6 +3621,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 257503232}
     - target: {fileID: 8764600980370672419, guid: 11f882a8662a73d4eb6c78514d8db136, type: 3}
+      propertyPath: maxStamps
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764600980370672419, guid: 11f882a8662a73d4eb6c78514d8db136, type: 3}
       propertyPath: DialogueBox
       value: 
       objectReference: {fileID: 257503232}
@@ -10211,6 +10215,10 @@ PrefabInstance:
       value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 8764600980370672419, guid: 9d01b1ae4815132419209b26c0ec2984, type: 3}
+      propertyPath: maxStamps
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764600980370672419, guid: 9d01b1ae4815132419209b26c0ec2984, type: 3}
       propertyPath: DialogueBox
       value: 
       objectReference: {fileID: 257503232}
@@ -10833,6 +10841,10 @@ PrefabInstance:
     - target: {fileID: 3541334880954371171, guid: a8506c6bca257ec4988de6b4279d0571, type: 3}
       propertyPath: m_TagString
       value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764600980370672419, guid: a8506c6bca257ec4988de6b4279d0571, type: 3}
+      propertyPath: maxStamps
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8764600980370672419, guid: a8506c6bca257ec4988de6b4279d0571, type: 3}
       propertyPath: DialogueBox
@@ -12083,6 +12095,10 @@ PrefabInstance:
     - target: {fileID: 3541334880954371171, guid: f9ff81d3d8b9e8242b8351d1c64c586d, type: 3}
       propertyPath: m_TagString
       value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764600980370672419, guid: f9ff81d3d8b9e8242b8351d1c64c586d, type: 3}
+      propertyPath: maxStamps
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8764600980370672419, guid: f9ff81d3d8b9e8242b8351d1c64c586d, type: 3}
       propertyPath: DialogueBox
@@ -19302,6 +19318,10 @@ PrefabInstance:
       value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 8764600980370672419, guid: 4bf44aff49f86cb4c85e779e97644a6a, type: 3}
+      propertyPath: maxStamps
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764600980370672419, guid: 4bf44aff49f86cb4c85e779e97644a6a, type: 3}
       propertyPath: DialogueBox
       value: 
       objectReference: {fileID: 257503232}
@@ -23980,7 +24000,7 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: -4032481707582436298, guid: b4d877cfaee101647987655e088d6897, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 25.249998, y: 18.87542}
@@ -25509,9 +25529,17 @@ PrefabInstance:
       value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 8764600980370672419, guid: 55ab5ce5ca7bddc4596ac5f4037d8938, type: 3}
+      propertyPath: maxStamps
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764600980370672419, guid: 55ab5ce5ca7bddc4596ac5f4037d8938, type: 3}
       propertyPath: DialogueBox
       value: 
       objectReference: {fileID: 257503232}
+    - target: {fileID: 8764600980370672419, guid: 55ab5ce5ca7bddc4596ac5f4037d8938, type: 3}
+      propertyPath: stampedFaceSprite
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -3599469528667002668, guid: 55ab5ce5ca7bddc4596ac5f4037d8938, type: 3}
     m_RemovedGameObjects: []
@@ -26485,6 +26513,10 @@ PrefabInstance:
     - target: {fileID: 8764600980370672419, guid: 7c9f8cb00ae49a342b5797fe7a8ddc5d, type: 3}
       propertyPath: stampAt
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764600980370672419, guid: 7c9f8cb00ae49a342b5797fe7a8ddc5d, type: 3}
+      propertyPath: maxStamps
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8764600980370672419, guid: 7c9f8cb00ae49a342b5797fe7a8ddc5d, type: 3}
       propertyPath: DialogueBox
