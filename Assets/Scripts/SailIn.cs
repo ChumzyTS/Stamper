@@ -22,6 +22,7 @@ public class SailIn : MonoBehaviour
     private float currentSailInTime;
 
     private Vector2 playerOffset;
+    private SpriteRenderer sr;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -31,6 +32,7 @@ public class SailIn : MonoBehaviour
         playerMovement = player.GetComponent<PlayerMovement>();
 
         playerOffset = player.transform.position - boat.transform.position;
+        sr = player.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -42,6 +44,7 @@ public class SailIn : MonoBehaviour
             boat.transform.position = Vector3.Lerp(startPos, endPos, 1 - currentSailInTime / sailInTime);
             player.transform.position = boat.transform.position + (Vector3)playerOffset;
             playerMovement.enabled = false;
+            sr.flipX = true;
         }
         else
         {
