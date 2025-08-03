@@ -266,9 +266,9 @@ MonoBehaviour:
   background: {fileID: 750598739}
   black: {fileID: 847632444}
   doorClosed: {fileID: 21300000, guid: 470b488c44544db41b0e6e49e9945f3e, type: 3}
-  doorOpen: {fileID: 1230567317782063327, guid: 0d50ade336437a94587d12f1e7764a41, type: 3}
+  doorOpen: {fileID: 21300000, guid: 0d50ade336437a94587d12f1e7764a41, type: 3}
   dialogueBox: {fileID: 1839402355}
-  faceSprite: {fileID: 21300000, guid: 70a36183c660e6546b2e24a5ea48da6d, type: 3}
+  faceSprite: {fileID: 21300000, guid: 8789a6c2301974d40982daa13e516e14, type: 3}
   waitTime: 4
   convo1:
   - Knock knock!
