@@ -155,7 +155,7 @@ public class StampFace : MonoBehaviour
         windowPositionX = defaultWindowPositionX;
         windowPositionY = defaultWindowPositionY;
         if (manualPositioningMode) {
-            StartStampage(friendID);
+            StartStampage(friendID, null);
         }
     }
 
@@ -189,13 +189,13 @@ public class StampFace : MonoBehaviour
         
     }
 
-    public void StartStampage(int id)
+    public void StartStampage(int id, PlayerMovement playerMovement)
     {
         friendID = id;
-        StartCoroutine(StampWindow());
+        StartCoroutine(StampWindow(playerMovement));
     }
 
-    IEnumerator StampWindow()
+    IEnumerator StampWindow(PlayerMovement playerMovement)
     {
         UpdateCurrent(friendID);
         UpdateScene();
@@ -219,6 +219,12 @@ public class StampFace : MonoBehaviour
         stampObject.SetActive(false);
         yield return new WaitForSeconds(1);
         stamped = false;
+
+        if (playerMovement)
+        {
+            playerMovement.enabled = true;
+        }
+
         gameObject.SetActive(false);
 
     }

@@ -148,20 +148,23 @@ public class Dialogue : MonoBehaviour
             if (stamping)
             {
                 StampFace.SetActive(true);
-                StampFace.GetComponent<StampFace>().StartStampage(friendID);
+                StampFace.GetComponent<StampFace>().StartStampage(friendID, playerMovement);
                 if (friendObj != null)
                 {
 
                     friendObj.GetComponent<SpriteRenderer>().sprite = friendObj.GetComponent<FriendDialogue>().stampedWindowSprite;
                 }
-                
-                
+
+
+            }
+            else
+            {
+                if (playerMovement)
+                {
+                    playerMovement.enabled = true;
+                }
             }
 
-            if (playerMovement)
-            {
-                playerMovement.enabled = true;
-            }
             gameObject.SetActive(false);
         }
     }
