@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 25f350908442712459a7dbe7377d584e
+guid: fcd36b61c59c2b94db70c2a4ef8ae06a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7902175753425518528
-    second: mark window_0
+      213: 4914690145203611083
+    second: mark_sprite_lower_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,11 +113,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mark window_0
+      name: mark_sprite_lower_0
       rect:
         serializedVersion: 2
-        x: 232
-        y: 158
+        x: 239
+        y: 49
         width: 436
         height: 687
       alignment: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0400e501505d55290800000000000000
-      internalID: -7902175753425518528
+      spriteID: bc569fdd5ac743440800000000000000
+      internalID: 4914690145203611083
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      mark window_0: -7902175753425518528
+      mark_sprite_lower_0: 4914690145203611083
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

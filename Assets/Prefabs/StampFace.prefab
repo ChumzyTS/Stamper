@@ -140,7 +140,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &5374157021753118309
 MonoBehaviour:
@@ -199,7 +199,7 @@ MonoBehaviour:
   stampObject: {fileID: 3958557662496968312}
   stampMarkObject: {fileID: 8316800616363506916}
   stampUI: {fileID: 6055883376977604323}
-  friendID: 0
+  friendID: 2
   currentSprite: {fileID: 0}
   currentStampX: 0
   currentStampY: 0
@@ -212,39 +212,39 @@ MonoBehaviour:
   windowPositionX: 0
   windowPositionY: 0
   cecelia1Sprite: {fileID: 21300000, guid: 4e9d73cb22cceed4b9e4e0585e6fb8e0, type: 3}
-  cecelia1StampX: 165
-  cecelia1StampY: -335
-  cecelia1RotationZ: 0
+  cecelia1StampX: 148
+  cecelia1StampY: -356
+  cecelia1RotationZ: -20
   cecelia1AltPos: 0
-  cecelia2Sprite: {fileID: 0}
-  cecelia2StampX: 0
-  cecelia2StampY: 0
-  cecelia2RotationZ: 0
+  cecelia2Sprite: {fileID: 21300000, guid: fa3b9ec59cd637e4e9f1bccc6389c9ab, type: 3}
+  cecelia2StampX: -162
+  cecelia2StampY: -613
+  cecelia2RotationZ: 15
   cecelia2AltPos: 0
-  frogSprite: {fileID: 0}
-  frogStampX: 0
-  frogStampY: 0
-  frogRotationZ: 0
+  frogSprite: {fileID: 21300000, guid: 5a687ac638ddc7a479c0260cf2642c5a, type: 3}
+  frogStampX: -125
+  frogStampY: -350
+  frogRotationZ: -8
   frogAltPos: 0
   batthewSprite: {fileID: 21300000, guid: 760556855e1b9e645b9cfd691ed8322e, type: 3}
-  batthewStampX: 0
-  batthewStampY: 0
-  batthewRotationZ: 0
+  batthewStampX: -285
+  batthewStampY: -75
+  batthewRotationZ: -35
   batthewAltPos: 1
-  catrinaSprite: {fileID: 0}
-  catrinaStampX: 0
-  catrinaStampY: 0
-  catrinaRotationZ: 0
+  catrinaSprite: {fileID: 21300000, guid: 8ccf66ad1d8662e44a6e99e2a6a1f669, type: 3}
+  catrinaStampX: -125
+  catrinaStampY: -330
+  catrinaRotationZ: 35
   catrinaAltPos: 0
-  pollySprite: {fileID: 0}
-  pollyStampX: 0
-  pollyStampY: 0
-  pollyRotationZ: 0
+  pollySprite: {fileID: 21300000, guid: 76202fc51f74a3c4db05727ac2a3cf77, type: 3}
+  pollyStampX: -253
+  pollyStampY: -750
+  pollyRotationZ: 5
   pollyAltPos: 0
-  greatSageOfTheEastSprite: {fileID: 0}
-  greatSageOfTheEastStampX: 0
-  greatSageOfTheEastStampY: 0
-  greatSageOfTheEastRotationZ: 0
+  greatSageOfTheEastSprite: {fileID: 21300000, guid: 83dbb12df23f1574abd8b9d4ea7b8ad0, type: 3}
+  greatSageOfTheEastStampX: 107
+  greatSageOfTheEastStampY: -362
+  greatSageOfTheEastRotationZ: 15
   greatSageOfTheEastAltPos: 0
   markSprite: {fileID: 0}
   markStampX: 0
