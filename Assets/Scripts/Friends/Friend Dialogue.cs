@@ -70,7 +70,7 @@ public class FriendDialogue : MonoBehaviour
 
     public void RunDialogue()
     {
-        if (DialogueBox.activeSelf == false && conversationLengths.Length != 0)
+        if ((DialogueBox.activeSelf || DialogueBox.GetComponent<Dialogue>().StampFace.activeSelf) == false && conversationLengths.Length != 0)
         {
             DialogueBox.SetActive(true);
 

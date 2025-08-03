@@ -218,6 +218,7 @@ public class StampFace : MonoBehaviour
         yield return new WaitForSeconds(1);
         stampObject.SetActive(false);
         yield return new WaitForSeconds(1);
+        stamped = false;
         gameObject.SetActive(false);
 
     }
