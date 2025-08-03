@@ -31865,19 +31865,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4407727507789064937, guid: 8f47e78d65a9d3f40ba3d44f6715d468, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.57
+      value: 0.0548369
       objectReference: {fileID: 0}
     - target: {fileID: 4407727507789064937, guid: 8f47e78d65a9d3f40ba3d44f6715d468, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.57
+      value: 0.059621986
       objectReference: {fileID: 0}
     - target: {fileID: 4407727507789064937, guid: 8f47e78d65a9d3f40ba3d44f6715d468, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.012
+      value: 18.1554
       objectReference: {fileID: 0}
     - target: {fileID: 4407727507789064937, guid: 8f47e78d65a9d3f40ba3d44f6715d468, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 76.784
+      value: 76.6254
       objectReference: {fileID: 0}
     - target: {fileID: 4407727507789064937, guid: 8f47e78d65a9d3f40ba3d44f6715d468, type: 3}
       propertyPath: m_LocalPosition.z
@@ -31915,6 +31915,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VictoryDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 7654815898636716620, guid: 8f47e78d65a9d3f40ba3d44f6715d468, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2724599658818098956, guid: 30a07250fb5175f4ab37101ff4e1718c, type: 3}
     - target: {fileID: 7864346016299610052, guid: 8f47e78d65a9d3f40ba3d44f6715d468, type: 3}
       propertyPath: fader
       value: 
@@ -34136,6 +34140,10 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 1733197158}
+    - target: {fileID: 5948827583330325711, guid: f34db172a88d67340b73c2c4fde74a85, type: 3}
+      propertyPath: openDoor
+      value: 
+      objectReference: {fileID: -7341407202210888751, guid: 714c603ab5a48014d8f44825ee5e78e7, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
