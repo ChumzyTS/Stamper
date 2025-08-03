@@ -619,7 +619,8 @@ MonoBehaviour:
   textComponent: {fileID: 528778538159401687}
   nameComponent: {fileID: 4708733311219072495}
   faceComponent: {fileID: 1738569748687656705}
-  textSpeed: 0.1
+  textSpeed: 0.01
   conversation: 1
   StampFace: {fileID: 0}
   MailCarrier: {fileID: 0}
+  playerMovement: {fileID: 0}
