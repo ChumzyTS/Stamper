@@ -3636,6 +3636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 402366578}
   boatAnimator: {fileID: 419368982}
+  selectSFX: {fileID: 8300000, guid: 2d7a0de1037768f45aaf7b9700458bd5, type: 3}
 --- !u!1 &2100519425
 GameObject:
   m_ObjectHideFlags: 0

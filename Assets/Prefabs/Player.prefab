@@ -409,13 +409,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpKey: 32
   glideKey: 119
+  glideAltKey: 273
   stampKey: 115
+  stampAltKey: 274
   respawnKey: 114
   movementSpeed: 8
   startsFacingRight: 1
   jumpVelocity: 5
   jumpTime: 0.15
-  jumpSFX: {fileID: 8300000, guid: d6b8b67c6b48f3a4dacaa3a48c936ca6, type: 3}
+  jumpSFX: {fileID: 8300000, guid: df3b4176165baad4ea2840189cfe260a, type: 3}
   extraJumps: 2
   jumpRememberanceTime: 0.1
   flapParticles: {fileID: 196278483930712957}

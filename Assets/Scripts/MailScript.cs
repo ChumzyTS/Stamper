@@ -22,11 +22,10 @@ public class MailScript : MonoBehaviour
     {
         letter.SetActive(true);
         animator.SetTrigger("Deliver");
-        SFXManager.Instance.PlaySFXClip(deliverSfx, transform, (float)SFXManager.Instance.optionsMenu.GetComponent<OptionsMenu>().soundVol);
+        //SFXManager.Instance.PlaySFXClip(deliverSfx, transform, (float)SFXManager.Instance.optionsMenu.GetComponent<OptionsMenu>().soundVol);
         yield return new WaitForSeconds(1.9f);
         letter.SetActive(false);
 
-        // Gem could maybe animate this to fly in from the left side, slow down in the middle, and then accelerate again leaving stage right?
 
     }
 
