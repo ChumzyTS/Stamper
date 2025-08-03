@@ -1,5 +1,3 @@
-using Microsoft.Unity.VisualStudio.Editor;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class SailIn : MonoBehaviour
