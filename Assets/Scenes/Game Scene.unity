@@ -11965,6 +11965,10 @@ PrefabInstance:
       value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 8764600980370672419, guid: f9ff81d3d8b9e8242b8351d1c64c586d, type: 3}
+      propertyPath: friendID
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764600980370672419, guid: f9ff81d3d8b9e8242b8351d1c64c586d, type: 3}
       propertyPath: maxStamps
       value: 1
       objectReference: {fileID: 0}
