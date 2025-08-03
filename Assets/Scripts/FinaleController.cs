@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class FinaleController : MonoBehaviour
 {
@@ -19,6 +20,10 @@ public class FinaleController : MonoBehaviour
     private string[] convo1;
     [SerializeField]
     private string[] convo2;
+    [SerializeField]
+    private Animator fader;
+    [SerializeField]
+    private string credits;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -45,6 +50,12 @@ public class FinaleController : MonoBehaviour
         dialogueBox.SetActive(true);
         dialogueBox.GetComponent<Dialogue>().StartDialogue(convo2, "Cecilia", false, -1, faceSprite, 7, true, null, 3, mail);
         while (dialogueBox.activeSelf == true) yield return null;
+        yield return new WaitForSeconds(1);
+        while (dialogueBox.GetComponent<Dialogue>().StampFace.activeSelf == true) yield return null;
+        yield return new WaitForSeconds(1);
+        fader.SetTrigger("FadeOut");
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(credits);
     }
 
     IEnumerator FadeOut(GameObject sprite)
